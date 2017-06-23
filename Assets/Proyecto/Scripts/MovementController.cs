@@ -70,7 +70,7 @@ public class MovementController : OVRPlayerController {
         Vector3 predictedXZ = Vector3.Scale( (Controller.transform.localPosition + moveDirection), new Vector3( 1, 0, 1 ) );
 
         // Move contoller
-        Debug.Log( string.Format( "moveDirection: {0}", moveDirection ) );
+        //Debug.Log( string.Format( "moveDirection: {0}", moveDirection ) );
         if ( DebugUI.instance != null )
             DebugUI.instance.print( string.Format( "moveDirection: {0}", moveDirection ) );
         Controller.Move( moveDirection );
@@ -177,7 +177,7 @@ public class MovementController : OVRPlayerController {
 
         Vector2 primaryAxis = OVRInput.Get( OVRInput.Axis2D.PrimaryThumbstick );
 
-        Debug.Log( string.Format( "Axis:{0}", primaryAxis ) );
+        //Debug.Log( string.Format( "Axis:{0}", primaryAxis ) );
 
         MoveThrottle += CameraRig.rightEyeCamera.transform.forward * primaryAxis.y;
         MoveThrottle += CameraRig.rightEyeCamera.transform.right * primaryAxis.x;
@@ -204,7 +204,7 @@ public class MovementController : OVRPlayerController {
 
         euler.y += secondaryAxis.x * rotateInfluence;
 
-        Debug.LogFormat( "Euler Angles: {0}", euler );
+        //Debug.LogFormat( "Euler Angles: {0}", euler );
 
         transform.rotation = Quaternion.Euler( euler );
     }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc666e6ba5aa0c44934f8a9971795e2, type: 3}
+  m_Name: BotonEnergia
+  m_EditorClassIdentifier: 
+  label: "Bot\xF3n"
+  isActive: 0
+  initialActive: 0
+  requiredObjects:
+  - {fileID: 11400000, guid: b11242f854877e541bfdb11710786731, type: 2}
+  - {fileID: 11400000, guid: 63fec9b2b37783e4780cf005d055613d, type: 2}
+  successText: Ya hay electricidad!
+  failedText: "No pas\xF3 nada"

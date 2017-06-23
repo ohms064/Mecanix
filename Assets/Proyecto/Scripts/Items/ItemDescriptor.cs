@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEditor;
 
 
-[CreateAssetMenu(menuName = "LevelManager/Create Item")]
-public class ItemDescriptor : ScriptableObject {
-    public int id;
-    public string label;
+[CreateAssetMenu(menuName = "LevelManager/Objects/Create Item")]
+public class ItemDescriptor : Descriptor {
     [TextArea(5, 10)]
     public string description;
 }

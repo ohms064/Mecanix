@@ -9,9 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13cf57f5fd97fa2419391957f56edcd3, type: 3}
-  m_Name: CablesCortados
+  m_Name: Piloto
   m_EditorClassIdentifier: 
+  label: Piloto
+  isActive: 0
+  initialActive: 0
   itemInteractions:
-  - item: {fileID: 11400000, guid: cff403f8b1c98164d9acc9d526dafc55, type: 2}
-    correctText: Los cables fueron arreglados.
-  failedInteraction: "No puedes arreglar los cables con \xE9sto."
+    item: {fileID: 11400000, guid: f683c091b7edfab4e97cd65aaf8a7c77, type: 2}
+    correctText: "Se le puso la m\xE1scara el piloto"
+  failedInteraction: "\xA1No puede usar \xE9sto!"
