@@ -94,4 +94,7 @@ public class Door : InteractiveBehaviour {
     public void OnUnloadFinished() {
     }
 
+    public override void Restart() {
+        throw new NotImplementedException();
+    }
 }

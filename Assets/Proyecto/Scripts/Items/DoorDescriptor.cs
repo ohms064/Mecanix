@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(menuName = "LevelManager/Objects/Create Door" )]
 public class DoorDescriptor : Descriptor {
-    [HideInInspector]public int leftScene, rightScene;
+    public SceneData leftScene, rightScene;
     public event SceneDelegate SceneLoadingFinish;
     public event SceneDelegate StartSceneLoading;
 
@@ -14,7 +14,7 @@ public class DoorDescriptor : Descriptor {
             StartSceneLoading();
         }
 
-        AsyncOperation loader = SceneManager.LoadSceneAsync( leftScene, LoadSceneMode.Additive );
+        AsyncOperation loader = SceneManager.LoadSceneAsync( leftScene.sceneId, LoadSceneMode.Additive );
         loader.allowSceneActivation = false;
         while ( !loader.isDone ) {
             yield return new WaitForEndOfFrame();
@@ -32,7 +32,7 @@ public class DoorDescriptor : Descriptor {
             StartSceneLoading();
         }
 
-        AsyncOperation loader = SceneManager.LoadSceneAsync( rightScene, LoadSceneMode.Additive );
+        AsyncOperation loader = SceneManager.LoadSceneAsync( rightScene.sceneId, LoadSceneMode.Additive );
         loader.allowSceneActivation = false;
         while ( !loader.isDone ) {
             yield return new WaitForEndOfFrame();
@@ -46,7 +46,7 @@ public class DoorDescriptor : Descriptor {
     }
 
     public IEnumerator UnLoadSceneLeft() {
-        AsyncOperation loader = SceneManager.UnloadSceneAsync( leftScene);
+        AsyncOperation loader = SceneManager.UnloadSceneAsync( leftScene.sceneId);
         loader.allowSceneActivation = false;
         while ( !loader.isDone ) {
             yield return new WaitForEndOfFrame();
@@ -57,7 +57,7 @@ public class DoorDescriptor : Descriptor {
     }
 
     public IEnumerator UnLoadSceneRight() {
-        AsyncOperation loader = SceneManager.UnloadSceneAsync( rightScene );
+        AsyncOperation loader = SceneManager.UnloadSceneAsync( rightScene.sceneId );
         loader.allowSceneActivation = false;
         while ( !loader.isDone ) {
             yield return new WaitForEndOfFrame();

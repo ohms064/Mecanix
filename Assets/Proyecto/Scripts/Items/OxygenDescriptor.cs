@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum OxygenStatus {
-    NORMAL, WARNING, DANGER, DEATH
+    NORMAL, WARNING, DANGER, DEATH, START
 }
 
 [CreateAssetMenu( menuName = "LevelManager/Status/Create Oxygen Data" )]
@@ -18,9 +18,9 @@ public class OxygenDescriptor : Descriptor {
     
     [SerializeField] private float warningOxigeno, dangerOxigeno, maxOxigeno;
 
-    private void Begin() {
+    public void Begin() {
         nivelOxigeno = maxOxigeno;
-        status = OxygenStatus.NORMAL;
+        status = OxygenStatus.START;
     }
 
     public void Set( float delta ) {

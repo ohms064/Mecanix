@@ -8,11 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d52f05ddadd65214f87bf703ad9cad4e, type: 3}
-  m_Name: FirstDoor
+  m_Script: {fileID: 11500000, guid: 6684d22daf3a8114b880b04eecacff00, type: 3}
+  m_Name: Afuera
   m_EditorClassIdentifier: 
-  label: 
-  isActive: 1
-  initialActive: 0
-  leftScene: 0
-  rightScene: 1

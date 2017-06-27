@@ -12,6 +12,7 @@ public class ItemReceiver : InteractiveBehaviour {
             return;
         }
         if ( interactor.grabbedObjectData.data.Equals( data.itemInteractions.item )) {
+            interactor.grabbedObjectData.Interact( this );
             Transform droppedObject = interactor.Drop();
             droppedObject.gameObject.SetActive( false );
             data.isActive = true;
@@ -25,5 +26,8 @@ public class ItemReceiver : InteractiveBehaviour {
 
     public override void Interact( InteractiveBehaviour interactor ) {
         
+    }
+
+    public override void Restart() {
     }
 }

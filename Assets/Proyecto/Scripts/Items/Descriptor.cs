@@ -9,6 +9,8 @@ public class Descriptor : ScriptableObject {
     public string label;
     public bool isActive = false;
     [SerializeField] private bool initialActive = false;
+    [TextArea( 5, 10 )]
+    public string description;
 
     public virtual void Reset() {
         isActive = initialActive;

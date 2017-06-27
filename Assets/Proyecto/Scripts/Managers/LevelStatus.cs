@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using UnityEngine;
 
 [CreateAssetMenu( menuName = "LevelManager/Create Level Status")]
 public class LevelStatus : ScriptableObject {

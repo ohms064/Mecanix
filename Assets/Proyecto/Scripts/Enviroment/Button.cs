@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Button : InteractiveBehaviour {
-    public InetactorDescriptor data;
+    public InteractorDescriptor data;
     public InteractiveBehaviour[] effect;
     public override void Interact( PlayerInteractor interactor ) {
         if ( effect == null ) {
@@ -23,5 +23,9 @@ public class Button : InteractiveBehaviour {
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
+    }
+
+    public override void Restart() {
+        throw new NotImplementedException();
     }
 }

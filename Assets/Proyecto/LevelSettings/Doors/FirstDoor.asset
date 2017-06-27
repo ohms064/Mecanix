@@ -8,15 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a06de6fe5006431489ed49b3d5cda0f6, type: 3}
-  m_Name: Oxygen
+  m_Script: {fileID: 11500000, guid: d52f05ddadd65214f87bf703ad9cad4e, type: 3}
+  m_Name: FirstDoor
   m_EditorClassIdentifier: 
-  label: Medidor Oxigeno
+  label: 
   isActive: 0
   initialActive: 0
-  description: "\xA1El ox\xEDgeno se est\xE1 acabando!"
-  status: 0
-  nivelOxigeno: 0
-  warningOxigeno: 50
-  dangerOxigeno: 30
-  maxOxigeno: 100
+  description: 
+  leftScene: {fileID: 11400000, guid: 675695d0bc42fc642abe75d35e67c78b, type: 2}
+  rightScene: {fileID: 11400000, guid: 66343dae06f9cac4797faa07d66702df, type: 2}

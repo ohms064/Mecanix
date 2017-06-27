@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33dd8dc9f881a3a4cb543c6d3177764b, type: 3}
+  m_Name: Compuerta
+  m_EditorClassIdentifier: 
+  dir: {fileID: 2800000, guid: 0ebee5ec18883294cae6d9d6b97adcf7, type: 3}
+  color: {fileID: 2800000, guid: 368c73c189400d549830be0172ebe4e0, type: 3}
+  shadowmask: {fileID: 2800000, guid: 6aaf5e96c1a6eb74daff8c0528cf9b3a, type: 3}
+  sceneId: 0

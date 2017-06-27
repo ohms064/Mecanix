@@ -2,12 +2,6 @@
 
 public class MovementController : OVRPlayerController {
 
-
-    protected override void Awake() {
-        base.Awake();
-
-    }
-
     protected override void UpdateController() {
         if ( useProfileData ) {
             if ( InitialPose == null ) {
@@ -42,8 +36,8 @@ public class MovementController : OVRPlayerController {
         float motorDamp = (1.0f + (Damping * SimulationRate * Time.deltaTime));
 
         MoveThrottle.x /= motorDamp;
-        //MoveThrottle.y = (MoveThrottle.y > 0.0f) ? (MoveThrottle.y / motorDamp) : MoveThrottle.y;
-        MoveThrottle.y /= motorDamp;
+        MoveThrottle.y = (MoveThrottle.y > 0.0f) ? (MoveThrottle.y / motorDamp) : MoveThrottle.y;
+        //MoveThrottle.y /= motorDamp;
         MoveThrottle.z /= motorDamp;
 
         if ( DebugUI.instance != null )
@@ -179,8 +173,8 @@ public class MovementController : OVRPlayerController {
 
         //Debug.Log( string.Format( "Axis:{0}", primaryAxis ) );
 
-        MoveThrottle += CameraRig.rightEyeCamera.transform.forward * primaryAxis.y;
-        MoveThrottle += CameraRig.rightEyeCamera.transform.right * primaryAxis.x;
+        MoveThrottle += CameraRig.rightEyeCamera.transform.forward * primaryAxis.y * moveInfluence * BackAndSideDampen * transform.lossyScale.z;
+        MoveThrottle += CameraRig.rightEyeCamera.transform.right * primaryAxis.x * moveInfluence * BackAndSideDampen * transform.lossyScale.x;
 
         if ( DebugUI.instance != null )
             DebugUI.instance.print( string.Format( "Camera Forward: {0}Right {1}", CameraRig.rightEyeCamera.transform.forward, CameraRig.rightEyeCamera.transform.right ) );
@@ -203,7 +197,7 @@ public class MovementController : OVRPlayerController {
             DebugUI.instance.print( string.Format( "Throttle 3: {0} Post Axis Input", MoveThrottle ) );
 
         euler.y += secondaryAxis.x * rotateInfluence;
-
+         
         //Debug.LogFormat( "Euler Angles: {0}", euler );
 
         transform.rotation = Quaternion.Euler( euler );

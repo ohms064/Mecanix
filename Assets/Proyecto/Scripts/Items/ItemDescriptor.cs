@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "LevelManager/Objects/Create Item")]
 public class ItemDescriptor : Descriptor {
-    [TextArea(5, 10)]
-    public string description;
+    public Vector3 position = Vector3.zero;
+
+    public override void Reset() {
+        base.Reset();
+        position = Vector3.zero;
+    }
 }

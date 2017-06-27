@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour {
     public OxygenDescriptor oxygen;
 
     [SerializeField] Descriptor[] reset;
-    [SerializeField] GameObject[] dontDestroy;
-    
+
     public static GameManager instance;
 
 
@@ -25,9 +24,9 @@ public class GameManager : MonoBehaviour {
         for ( int i = 0; i < reset.Length; i++ ) {
             reset[i].Reset();
         }
+    }
 
-        for ( int i = 0; i < dontDestroy.Length; i++ ) {
-            DontDestroyOnLoad( dontDestroy[i] );
-        }
+    private void OnDestroy() {
+        instance = null;
     }
 }
