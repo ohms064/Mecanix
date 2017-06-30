@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DoorHold : Door {
     private float t = 0;
+    private float animInverse;
+
+    private new void Start() {
+        origin = this.transform.position;
+        animInverse = animationDuration;
+    }
 
     public override void Interact( PlayerInteractor interactor ) {
     }
@@ -13,18 +19,18 @@ public class DoorHold : Door {
             if ( !data.isActive ) {
                 data.isActive = true;
                 if ( !isOpen ) {
-                    StopCoroutine( "Close" );
+                    StopCoroutine( Close() );
                 }
-                StartCoroutine( "Open" );
+                StartCoroutine( Open() );
             }
         }
         else{
             if ( data.isActive ) {
                 data.isActive = false;
                 if ( isOpen ) {
-                    StopCoroutine( "Open" );
+                    StopCoroutine( Open() );
                 }
-                StartCoroutine( "Close" );
+                StartCoroutine( Close() );
             }
         }
     }
@@ -33,7 +39,7 @@ public class DoorHold : Door {
         float beginTime = Time.timeSinceLevelLoad;
         isOpen = true;
         while ( t < 1 ) {
-            t = (Time.timeSinceLevelLoad - beginTime) / animationDuration;
+            t += Time.deltaTime * animInverse;
             transform.position = Vector3.Lerp( origin, destiny, t );
             yield return new WaitForEndOfFrame();
         }
@@ -42,9 +48,9 @@ public class DoorHold : Door {
     protected override IEnumerator Close() {
         float beginTime = Time.timeSinceLevelLoad;
         isOpen = false;
-        while ( t < 1 ) {
-            t = (Time.timeSinceLevelLoad - beginTime) / animationDuration;
-            transform.position = Vector3.Lerp( destiny, origin, t );
+        while ( t > 0 ) {
+            t -= Time.deltaTime * animInverse;
+            transform.position = Vector3.Lerp( origin, destiny, t );
             yield return new WaitForEndOfFrame();
         }       
     }

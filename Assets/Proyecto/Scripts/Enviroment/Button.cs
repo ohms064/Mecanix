@@ -23,11 +23,8 @@ public class Button : InteractiveBehaviour {
         if ( effect == null ) {
             return;
         }
-        for ( int i = 0; i < data.requiredObjects.Length; i++ ) {
-            if ( !data.requiredObjects[i].isActive ) {
-                Debug.Log( data.failedText );
-                return;
-            }
+        if ( !data.canActivate() ) {
+            return;
         }
         Debug.Log( data.successText );
         for ( int i = 0; i < effect.Length; i++ ) {

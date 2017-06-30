@@ -20,13 +20,14 @@ public class PlayerInteractor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-#if UNITY_EDITOR
-        if ( Input.GetMouseButtonDown( 0 ) ) {
-#else
-        if ( OVRInput.GetDown( OVRInput.Button.One ) ) {        
-#endif
+        if ( DebugUI.instance != null )
+            DebugUI.instance.print( "Trying button" );
+
+        if ( OVRInput.GetDown( OVRInput.Button.PrimaryHandTrigger ) ) {        
+            if(DebugUI.instance != null)
+                DebugUI.instance.print( "Interaction" );
             TryInteract();
-        }
+        }        
 	}
 
     void TryInteract() {

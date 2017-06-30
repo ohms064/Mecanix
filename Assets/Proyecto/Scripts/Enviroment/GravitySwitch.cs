@@ -11,7 +11,7 @@ public class GravitySwitch : InteractiveBehaviour {
     }
     public override void Interact( PlayerInteractor interactor ) {
         on = !on;
-        descriptor.Set( on );
+        descriptor.Set( on, this );
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {

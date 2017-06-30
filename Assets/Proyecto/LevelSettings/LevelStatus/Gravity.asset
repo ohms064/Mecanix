@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Name: Gravity
   m_EditorClassIdentifier: 
   label: 
-  isActive: 0
-  initialActive: 0
+  isActive: 1
+  initialActive: 1
   description: 
   gravityValue: {x: 0, y: -9.8, z: 0}
   noGravityValue: {x: 0, y: 9.8, z: 0}
+  shiftDuration: 1
+  gravityDuration: 10

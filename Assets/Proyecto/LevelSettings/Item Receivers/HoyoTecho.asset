@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cf57f5fd97fa2419391957f56edcd3, type: 3}
   m_Name: HoyoTecho
   m_EditorClassIdentifier: 
-  label: 
+  label: Hoyo
   isActive: 0
   initialActive: 0
-  description: 
+  description: Agujero por donde se fuga el aire de la nave.
   itemInteractions:
     item: {fileID: 11400000, guid: 0c3404f24965b454c81f5ba150524f6e, type: 2}
     correctText: "Se arregl\xF3 el techo de la pared. \xA1El ox\xEDgeno dej\xF3 de

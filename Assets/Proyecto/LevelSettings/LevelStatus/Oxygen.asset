@@ -16,7 +16,8 @@ MonoBehaviour:
   initialActive: 0
   description: "\xA1El ox\xEDgeno se est\xE1 acabando!"
   status: 0
-  nivelOxigeno: 0
-  warningOxigeno: 50
-  dangerOxigeno: 30
-  maxOxigeno: 100
+  nivelOxigeno: 215.1475
+  deathMessage: "\xA1Se acab\xF3 el ox\xEDgeno!"
+  warningOxigeno: 60
+  dangerOxigeno: 150
+  maxOxigeno: 300

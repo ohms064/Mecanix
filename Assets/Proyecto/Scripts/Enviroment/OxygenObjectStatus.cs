@@ -13,6 +13,7 @@ public class OxygenObjectStatus : InteractiveBehaviour {
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
+        OxygenManager.instance.Fix();
     }
 
     public void OnOxygenWarning() {
@@ -43,6 +44,6 @@ public class OxygenObjectStatus : InteractiveBehaviour {
     }
 
     public override void Restart() {
-        throw new NotImplementedException();
+        
     }
 }

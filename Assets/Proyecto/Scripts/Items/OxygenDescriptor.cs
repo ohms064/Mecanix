@@ -15,6 +15,7 @@ public class OxygenDescriptor : Descriptor {
     public event OxygenStatusChange OxygenDeath;
     public OxygenStatus status;
     public float nivelOxigeno;
+    [TextArea(5,10)] public string deathMessage;
     
     [SerializeField] private float warningOxigeno, dangerOxigeno, maxOxigeno;
 
@@ -29,6 +30,7 @@ public class OxygenDescriptor : Descriptor {
         if ( nivelOxigeno <= 0  ) {  
             if ( OxygenDeath != null && status != OxygenStatus.DEATH ) {
                 status = OxygenStatus.DEATH;
+                Debug.Log( deathMessage );
                 OxygenDeath();
             }
             return;

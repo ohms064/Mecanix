@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ItemReceiver : InteractiveBehaviour {
 
-    [SerializeField]ReceiverDescriptor data;
+    [SerializeField]protected ReceiverDescriptor data;
+    [SerializeField] protected InteractiveBehaviour[] effect;
 
     public override void Interact( PlayerInteractor interactor ) {
         if ( interactor.grabbedObjectData == null ) {
@@ -17,8 +18,11 @@ public class ItemReceiver : InteractiveBehaviour {
             droppedObject.gameObject.SetActive( false );
             data.isActive = true;
             Debug.Log( data.itemInteractions.correctText );
+            for ( int i = 0; i < effect.Length; i++ ) {
+                effect[i].Interact( this );
+            }
         }
-        else {
+        else if(!data.isActive){
             Debug.Log( data.failedInteraction );
         }
 

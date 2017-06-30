@@ -58,10 +58,4 @@ public class EditorMovementController : MonoBehaviour {
 
     }
 
-    void OnControllerColliderHit( ControllerColliderHit hit ) {
-        if ( hit.transform.name == "Cube" ) {
-            hit.transform.GetComponent<MeshRenderer>().material.color = Color.gray;
-            hit.rigidbody.AddForce( 200.0f * hit.moveDirection, ForceMode.Impulse );
-        }
-    }
 }

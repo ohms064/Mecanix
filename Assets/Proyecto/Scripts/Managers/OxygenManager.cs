@@ -28,4 +28,9 @@ public class OxygenManager : MonoBehaviour {
         Debug.Log( "El oxígeno empezó a drenarse!" );
     }
 
+    public void Fix() {
+        isActive = false;
+        Debug.Log( "El oxígeno dejó de fugarse" );
+    }
+
 }

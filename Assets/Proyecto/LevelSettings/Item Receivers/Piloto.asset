@@ -8,13 +8,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13cf57f5fd97fa2419391957f56edcd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 802ba09b5bb40014c97640ec83eed083, type: 3}
   m_Name: Piloto
   m_EditorClassIdentifier: 
   label: Piloto
-  isActive: 0
+  isActive: 1
   initialActive: 0
+  description: 
   itemInteractions:
     item: {fileID: 11400000, guid: f683c091b7edfab4e97cd65aaf8a7c77, type: 2}
-    correctText: "Se le puso la m\xE1scara el piloto"
-  failedInteraction: "\xA1No puede usar \xE9sto!"
+    correctText: "Se puso la m\xE1scara al piloto"
+  failedInteraction: No parece servir de nada.
+  requiredObjects:
+  - {fileID: 11400000, guid: ccd9a447f8d7452438af3b4ee3cf2bd8, type: 2}
+  - {fileID: 11400000}
+  successText: 'Salvaste al piloto.
+
+    Fin del juego.'
+  failedText: "Necesitas salvar al piloto de la nave!\xA1"

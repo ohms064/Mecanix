@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-[CreateAssetMenu( menuName = "LevelManager/Objects/Create Interactor" )]
-public class InteractorDescriptor : Descriptor {
+﻿using UnityEngine;
+
+[CreateAssetMenu( menuName = "LevelManager/Objects/Create Piloto" )]
+class PilotoDescriptor : ReceiverDescriptor {
     public Descriptor[] requiredObjects;
     [TextArea( 5, 10 )]
     public string successText, failedText;
 
-    public bool canActivate() {
+    public new bool canActivate() {
         for ( int i = 0; i < requiredObjects.Length; i++ ) {
             if ( !requiredObjects[i].isActive ) {
                 Debug.Log( failedText );
@@ -18,3 +17,4 @@ public class InteractorDescriptor : Descriptor {
         return true;
     }
 }
+

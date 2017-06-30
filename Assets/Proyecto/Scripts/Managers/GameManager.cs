@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -26,7 +25,19 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    private void OnEnable() {
+        oxygen.OxygenDeath += RestartScene;
+    }
+
+    private void OnDisable() {
+        oxygen.OxygenDeath -= RestartScene;
+    }
+
     private void OnDestroy() {
         instance = null;
+    }
+
+    public void RestartScene() {        
+        SceneManager.LoadScene( 0 );
     }
 }

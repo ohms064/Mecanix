@@ -7,6 +7,7 @@ public class GravityDescriptor : Descriptor {
     public event ObjectDeactivate DeactivateGravity;
     public Vector3 gravityValue, noGravityValue;
     public float shiftDuration = 1;
+    public float gravityDuration = 30f;
 
     public void Set( bool on ) {
         isActive = on;
@@ -27,16 +28,17 @@ public class GravityDescriptor : Descriptor {
         if ( on ) {
             if ( ActivateGravity != null )
                 ActivateGravity( this );
-            behaviour.StartCoroutine( Activate() );
+            behaviour.StartCoroutine( Activate(behaviour) );
         }
         else {
             if ( DeactivateGravity != null )
                 DeactivateGravity( this );
-            behaviour.StartCoroutine( Deactivate() );
+            behaviour.StopAllCoroutines();
+            behaviour.StartCoroutine( Deactivate(behaviour));
         }
     }
 
-    IEnumerator Activate() {
+    IEnumerator Activate( MonoBehaviour behaviour ) {
         float t = 0;
         float time = Time.timeSinceLevelLoad;
         while ( t < 1f ) {
@@ -46,13 +48,17 @@ public class GravityDescriptor : Descriptor {
         }
     }
 
-    IEnumerator Deactivate() {
+    IEnumerator Deactivate( MonoBehaviour behaviour ) {
         float t = 0;
         float time = Time.timeSinceLevelLoad;
         while ( t < 1f ) {
             Physics.gravity = Vector3.Lerp( gravityValue, noGravityValue, t );
             yield return new WaitForEndOfFrame();
             t = (Time.timeSinceLevelLoad - time) / shiftDuration;
+        }
+        yield return new WaitForSeconds( gravityDuration );
+        if ( !isActive ) {
+            Set( true, behaviour );
         }
     }
 

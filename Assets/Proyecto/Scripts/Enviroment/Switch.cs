@@ -4,21 +4,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Switch : InteractiveBehaviour {
+    [SerializeField] InteractorDescriptor data;
     [SerializeField] InteractiveBehaviour objectToInteract;
 
     public override void Interact( PlayerInteractor interactor ) {
-        throw new NotImplementedException();
+        
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
-        throw new NotImplementedException();
+        
     }
 
     public override void Restart() {
-        throw new NotImplementedException();
+
     }
 
     private void OnCollisionEnter( Collision collision ) {
+        if ( collision.gameObject.GetComponent<WeightedItemData>() == null ) {
+            return;
+        }
+        message = true;
+        objectToInteract.Interact( this );
+    }
+
+    private void OnCollisionExit( Collision collision ) {
+        if ( collision.gameObject.GetComponent<WeightedItemData>() == null ) {
+            return;
+        }
+        message = false;
         objectToInteract.Interact( this );
     }
 
