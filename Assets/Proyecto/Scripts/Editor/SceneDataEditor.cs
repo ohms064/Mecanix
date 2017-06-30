@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(SceneData))]
+//[CustomEditor(typeof(SceneData))]
 public class SceneDataEditor : SceneEditor {
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();

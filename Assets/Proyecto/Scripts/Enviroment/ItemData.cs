@@ -7,7 +7,12 @@ public class ItemData : InteractiveBehaviour {
     public ItemDescriptor data;
 
     public override void Interact( PlayerInteractor interactor ) {
-        interactor.Grab( this.transform );
+        if ( interactor.secondInteraction ) {
+            interactor.Drop();
+        }
+        else {
+            interactor.Grab( this );
+        }
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
@@ -21,16 +26,6 @@ public class ItemData : InteractiveBehaviour {
         if ( data.isActive ) {
             gameObject.SetActive( false );
         }
-    }
-
-    private void Start() {
-        if ( data.position != Vector3.zero ) {
-            transform.position = data.position;
-        }
-    }
-
-    private void OnDestroy() {
-        data.position = transform.position;
     }
 
     public override void Restart() {

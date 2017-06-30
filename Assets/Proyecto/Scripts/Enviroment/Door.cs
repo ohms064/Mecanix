@@ -7,13 +7,12 @@ using UnityEngine.SceneManagement;
 public class Door : InteractiveBehaviour {
     public DoorDescriptor data;
     [SerializeField] DoorTrigger trigger;
-    private bool isRightScene = false;
-    [SerializeField] float animationDuration = 1f, openDuration;
-    private bool isAnimating = false, isOpen = false;
-    Vector3 origin;
-    [SerializeField] Vector3 destiny;
+    [SerializeField] protected float animationDuration = 1f, openDuration;
+    protected bool isAnimating = false, isOpen = false;
+    protected Vector3 origin;
+    [SerializeField] protected Vector3 destiny;
 
-    private void Start() {
+    protected void Start() {
         origin = transform.position;
     }
 
@@ -21,20 +20,18 @@ public class Door : InteractiveBehaviour {
         if ( !data.isActive || isAnimating || isOpen)
             return;
         //SceneManagement and open animation
-        isAnimating = true;
-        if ( isRightScene ) {
-            StartCoroutine( data.LoadSceneLeftAsync() );
-        }
-        else {
-            StartCoroutine( data.LoadSceneRightAsync() );
-        }
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
-        data.isActive = true;
+        if ( interactor.message )
+            data.isActive = true;
+        else if(data.isActive){
+            isAnimating = true;
+            StartCoroutine( data.DoorDelay() );
+        }
     }
 
-    IEnumerator Open() {
+    protected virtual IEnumerator Open() {
         float t = 0;
         float beginTime = Time.timeSinceLevelLoad;
         while ( t < 1 ) {
@@ -46,11 +43,11 @@ public class Door : InteractiveBehaviour {
         isOpen = true;
         do {
             yield return new WaitForSeconds( openDuration );
-        } while ( trigger.isInside );
+        } while ( trigger != null && trigger.isInside );
         StartCoroutine( "Close" );
     }
 
-    IEnumerator Close() {
+    protected virtual IEnumerator Close() {
         float t = 0;
         float beginTime = Time.timeSinceLevelLoad;
         isAnimating = true;
@@ -61,23 +58,17 @@ public class Door : InteractiveBehaviour {
         }
         isAnimating = false;
         isOpen = false;
-        isRightScene = GameManager.instance.player.transform.position.x - transform.position.x > 0; // false if player is on left of the door
-        if ( isRightScene ) { 
-            StartCoroutine(data.UnLoadSceneLeft());
-        }
-        else{
-            StartCoroutine(data.UnLoadSceneRight());
-        }
+        //isRightScene = GameManager.instance.player.transform.position.x - transform.position.x > 0; // false if player is on left of the door
     }
 
     // This function is called when the object becomes enabled and active
-    private void OnEnable() {
+    protected void OnEnable() {
         data.SceneLoadingFinish += OnSceneLoaded;
         data.StartSceneLoading += OnSceneLoadStart;
     }
 
     // This function is called when the behaviour becomes disabled or inactive
-    private void OnDisable() {
+    protected void OnDisable() {
         data.SceneLoadingFinish -= OnSceneLoaded;
         data.StartSceneLoading -= OnSceneLoadStart;
     }

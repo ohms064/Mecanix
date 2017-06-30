@@ -7,6 +7,19 @@ public class Button : InteractiveBehaviour {
     public InteractorDescriptor data;
     public InteractiveBehaviour[] effect;
     public override void Interact( PlayerInteractor interactor ) {
+        Activate();
+    }
+
+    public override void Interact( InteractiveBehaviour interactor ) {
+        message = interactor.message;
+        Activate();
+    }
+
+    public override void Restart() {
+        
+    }
+
+    private void Activate() {
         if ( effect == null ) {
             return;
         }
@@ -20,12 +33,5 @@ public class Button : InteractiveBehaviour {
         for ( int i = 0; i < effect.Length; i++ ) {
             effect[i].Interact( this );
         }
-    }
-
-    public override void Interact( InteractiveBehaviour interactor ) {
-    }
-
-    public override void Restart() {
-        throw new NotImplementedException();
     }
 }

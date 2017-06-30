@@ -10,6 +10,7 @@ public class PlayerInteractor : MonoBehaviour {
     Camera cameraOrigin;
     int layerMask;
     const int ITEM_LAYER = 9;
+    [HideInInspector] public bool secondInteraction;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,11 @@ public class PlayerInteractor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+#if UNITY_EDITOR
         if ( Input.GetMouseButtonDown( 0 ) ) {
+#else
+        if ( OVRInput.GetDown( OVRInput.Button.One ) ) {        
+#endif
             TryInteract();
         }
 	}
@@ -30,11 +35,20 @@ public class PlayerInteractor : MonoBehaviour {
         if ( Physics.Raycast( origin.position, origin.forward.normalized, out hit, grabDistance ) ) {
             var inter = hit.transform.GetComponent<InteractiveBehaviour>();
             if ( inter != null ) {
-                inter.Interact( this );
+                if ( inter.Equals( grabbedObjectData ) ) {
+                    secondInteraction = true;
+                    grabbedObjectData.Interact( this );
+                    secondInteraction = false;
+                }
+                else {
+                    inter.Interact( this );
+                }
             }
         }
         else if(grabbedObject != null){
-            Drop();
+            secondInteraction = true;
+            grabbedObjectData.Interact( this );
+            secondInteraction = false;
         }
     }
 
@@ -46,12 +60,12 @@ public class PlayerInteractor : MonoBehaviour {
         return droppedObject;
     }
 
-    public void Grab(Transform hit) {
+    public void Grab(ItemData hit) {
         if ( grabbedObject != null ) {
             return;
         }
-        grabbedObject = hit;
-        grabbedObjectData = grabbedObject.GetComponent<ItemData>();
+        grabbedObject = hit.transform;
+        grabbedObjectData = hit;
         grabbedObject.position = grabPosition.position;
         grabbedObject.parent = grabPosition; //TODO: This must be temporal!
     }

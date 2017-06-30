@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 23186861545143190}
   - component: {fileID: 135969670489075794}
   - component: {fileID: 114219712415402008}
-  - component: {fileID: 114852075706446814}
   - component: {fileID: 114963968713000098}
   m_Layer: 9
   m_Name: ItemDummy
@@ -225,17 +224,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e641cd4cbd3e20438114b23bf5497f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114852075706446814
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469442986454098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b407b656728c1c841aa5cb39abd493db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114963968713000098
