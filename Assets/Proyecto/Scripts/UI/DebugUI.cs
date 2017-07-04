@@ -14,15 +14,15 @@ public class DebugUI : MonoBehaviour {
 	    instance = this;
 	}
 
-    public void print( string text ) {
+    public void Log( string text ) {
         debug.text += string.Format("{0}\n",text);
         lines++;
         if ( lines > maxLines ) {
             string debugText = debug.text;
             int find = debugText.IndexOf( "\n", 1, StringComparison.Ordinal );
-            print( find );
             debugText = debugText.Remove( 0, find);
             debug.text = debugText;
         }
+        Debug.Log( text );
     }
 }

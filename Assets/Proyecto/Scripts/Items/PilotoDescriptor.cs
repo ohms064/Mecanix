@@ -8,12 +8,12 @@ class PilotoDescriptor : ReceiverDescriptor {
 
     public new bool canActivate() {
         for ( int i = 0; i < requiredObjects.Length; i++ ) {
-            if ( !requiredObjects[i].isActive ) {
-                Debug.Log( failedText );
+            if ( !requiredObjects[i].IsActive ) {
+                DebugUI.instance.Log( failedText );
                 return false;
             }
         }
-        Debug.Log( successText );
+        DebugUI.instance.Log( successText );
         return true;
     }
 }

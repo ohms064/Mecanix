@@ -5,14 +5,33 @@ using UnityEngine;
 
 public class Descriptor : ScriptableObject {
     public delegate void ObjectActivate( Descriptor descriptor );
-    public delegate void ObjectDeactivate( Descriptor descriptor );
+    public event ObjectActivate Activate, Deactivate;
     public string label;
-    public bool isActive = false;
-    [SerializeField] private bool initialActive = false;
+    public bool IsActive {
+        get {
+            return _isActive;
+        }
+        set {
+            if ( value == _isActive ) {
+                return;
+            }
+            _isActive = value;
+            if ( _isActive ) {
+                if ( Activate != null ) {
+                    Activate( this );
+                }
+                else if(Deactivate != null) {
+                    Deactivate( this );
+                }
+            }
+        }
+    }
+    [SerializeField] protected bool _isActive = false;
+    [SerializeField] protected bool initialActive = false;
     [TextArea( 5, 10 )]
-    public string description;
+    public string description, activeDescription;
 
     public virtual void Reset() {
-        isActive = initialActive;
-    }
+        IsActive = initialActive;
+    }    
 }

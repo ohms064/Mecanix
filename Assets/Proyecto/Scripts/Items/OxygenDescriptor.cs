@@ -30,7 +30,7 @@ public class OxygenDescriptor : Descriptor {
         if ( nivelOxigeno <= 0  ) {  
             if ( OxygenDeath != null && status != OxygenStatus.DEATH ) {
                 status = OxygenStatus.DEATH;
-                Debug.Log( deathMessage );
+                DebugUI.instance.Log( deathMessage );
                 OxygenDeath();
             }
             return;

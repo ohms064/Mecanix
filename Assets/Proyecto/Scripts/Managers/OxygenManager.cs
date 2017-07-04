@@ -25,12 +25,12 @@ public class OxygenManager : MonoBehaviour {
         isActive = true;
         descriptor.Begin();
         doorTrigger.SceneLoadingFinish -= OnSceneStart;
-        Debug.Log( "El oxígeno empezó a drenarse!" );
+        DebugUI.instance.Log( "El oxígeno empezó a drenarse!" );
     }
 
     public void Fix() {
         isActive = false;
-        Debug.Log( "El oxígeno dejó de fugarse" );
+        DebugUI.instance.Log( "El oxígeno dejó de fugarse" );
     }
 
 }

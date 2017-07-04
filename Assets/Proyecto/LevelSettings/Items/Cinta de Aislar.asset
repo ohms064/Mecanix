@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Cinta de Aislar
   m_EditorClassIdentifier: 
   label: Cinta
-  isActive: 0
-  description: 'Cinta adhesiva '
+  _isActive: 0
+  initialActive: 0
+  description: Cinsta para pegar cables
+  activeDescription: 

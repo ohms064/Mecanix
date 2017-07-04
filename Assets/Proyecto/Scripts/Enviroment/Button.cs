@@ -24,10 +24,12 @@ public class Button : InteractiveBehaviour {
             return;
         }
         if ( !data.canActivate() ) {
+            DebugUI.instance.Log( data.failedText );
             return;
         }
-        Debug.Log( data.successText );
+       
         for ( int i = 0; i < effect.Length; i++ ) {
+            DebugUI.instance.Log( data.successText );
             effect[i].Interact( this );
         }
     }

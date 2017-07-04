@@ -11,6 +11,7 @@ public class PlayerInteractor : MonoBehaviour {
     int layerMask;
     const int ITEM_LAYER = 9;
     [HideInInspector] public bool secondInteraction;
+    public OVRInput.Button button = OVRInput.Button.One;
 
 	// Use this for initialization
 	void Start () {
@@ -20,12 +21,14 @@ public class PlayerInteractor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ( DebugUI.instance != null )
-            DebugUI.instance.print( "Trying button" );
 
-        if ( OVRInput.GetDown( OVRInput.Button.PrimaryHandTrigger ) ) {        
-            if(DebugUI.instance != null)
-                DebugUI.instance.print( "Interaction" );
+        if (
+#if UNITY_EDITOR
+            Input.GetMouseButtonDown(0)
+#else
+            OVRInput.GetDown( button ) 
+#endif
+            ) {        
             TryInteract();
         }        
 	}
@@ -33,7 +36,7 @@ public class PlayerInteractor : MonoBehaviour {
     void TryInteract() {
         Transform origin = cameraOrigin.transform;
         RaycastHit hit;
-        if ( Physics.Raycast( origin.position, origin.forward.normalized, out hit, grabDistance ) ) {
+        if ( Physics.Raycast( origin.position, origin.forward.normalized, out hit, grabDistance, layerMask ) ) {
             var inter = hit.transform.GetComponent<InteractiveBehaviour>();
             if ( inter != null ) {
                 if ( inter.Equals( grabbedObjectData ) ) {

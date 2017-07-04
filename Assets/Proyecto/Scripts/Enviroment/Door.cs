@@ -17,15 +17,15 @@ public class Door : InteractiveBehaviour {
     }
 
     public override void Interact( PlayerInteractor interactor ) {
-        if ( !data.isActive || isAnimating || isOpen)
+        if ( !data.IsActive || isAnimating || isOpen)
             return;
         //SceneManagement and open animation
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
         if ( interactor.message )
-            data.isActive = true;
-        else if(data.isActive){
+            data.IsActive = true;
+        else if(data.IsActive){
             isAnimating = true;
             StartCoroutine( data.DoorDelay() );
         }

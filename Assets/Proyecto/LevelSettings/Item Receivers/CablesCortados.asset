@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Name: CablesCortados
   m_EditorClassIdentifier: 
   label: Cables
-  isActive: 0
+  isActive: 1
   initialActive: 0
+  description: "Los cables est\xE1n cortados"
+  activeDescription: "Los cables ya est\xE1n conectados."
   itemInteractions:
     item: {fileID: 11400000, guid: cff403f8b1c98164d9acc9d526dafc55, type: 2}
     correctText: Pegaste los cables con la cinta de aislar.

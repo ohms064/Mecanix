@@ -16,8 +16,8 @@ public class DoorHold : Door {
 
     public override void Interact( InteractiveBehaviour interactor ) {
         if ( interactor.message ){
-            if ( !data.isActive ) {
-                data.isActive = true;
+            if ( !data.IsActive ) {
+                data.IsActive = true;
                 if ( !isOpen ) {
                     StopCoroutine( Close() );
                 }
@@ -25,8 +25,8 @@ public class DoorHold : Door {
             }
         }
         else{
-            if ( data.isActive ) {
-                data.isActive = false;
+            if ( data.IsActive ) {
+                data.IsActive = false;
                 if ( isOpen ) {
                     StopCoroutine( Open() );
                 }

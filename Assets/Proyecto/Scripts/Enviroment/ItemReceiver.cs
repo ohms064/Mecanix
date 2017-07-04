@@ -5,25 +5,26 @@ using UnityEngine;
 
 public class ItemReceiver : InteractiveBehaviour {
 
-    [SerializeField]protected ReceiverDescriptor data;
+    [SerializeField] protected ReceiverDescriptor data;
     [SerializeField] protected InteractiveBehaviour[] effect;
 
     public override void Interact( PlayerInteractor interactor ) {
         if ( interactor.grabbedObjectData == null ) {
+            DebugUI.instance.Log( data.IsActive ? data.activeDescription : data.description );
             return;
         }
         if ( interactor.grabbedObjectData.data.Equals( data.itemInteractions.item )) {
             interactor.grabbedObjectData.Interact( this );
             Transform droppedObject = interactor.Drop();
             droppedObject.gameObject.SetActive( false );
-            data.isActive = true;
-            Debug.Log( data.itemInteractions.correctText );
+            data.IsActive = true;
+            DebugUI.instance.Log( data.itemInteractions.correctText );
             for ( int i = 0; i < effect.Length; i++ ) {
                 effect[i].Interact( this );
             }
         }
-        else if(!data.isActive){
-            Debug.Log( data.failedInteraction );
+        else if(!data.IsActive){
+            DebugUI.instance.Log( data.failedInteraction );
         }
 
     }

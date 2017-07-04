@@ -17,13 +17,13 @@ public class ItemData : InteractiveBehaviour {
 
     public override void Interact( InteractiveBehaviour interactor ) {
         if ( interactor is ItemReceiver ) {
-            data.isActive = true;
+            data.IsActive = true;
         }
         
     }
 
     private void Awake() {
-        if ( data.isActive ) {
+        if ( data.IsActive ) {
             gameObject.SetActive( false );
         }
     }

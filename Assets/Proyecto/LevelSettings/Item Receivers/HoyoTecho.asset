@@ -15,8 +15,9 @@ MonoBehaviour:
   isActive: 0
   initialActive: 0
   description: Agujero por donde se fuga el aire de la nave.
+  activeDescription: "\xA1Se arregl\xF3 el hoyo en la nave!"
   itemInteractions:
     item: {fileID: 11400000, guid: 0c3404f24965b454c81f5ba150524f6e, type: 2}
     correctText: "Se arregl\xF3 el techo de la pared. \xA1El ox\xEDgeno dej\xF3 de
       drenarse!"
-  failedInteraction: 
+  failedInteraction: "No se puede arreglar con \xE9sto."

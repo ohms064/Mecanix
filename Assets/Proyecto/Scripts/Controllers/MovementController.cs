@@ -40,8 +40,6 @@ public class MovementController : OVRPlayerController {
         //MoveThrottle.y /= motorDamp;
         MoveThrottle.z /= motorDamp;
 
-        if ( DebugUI.instance != null )
-            DebugUI.instance.print( string.Format( "Throttle 4: {0} Final", MoveThrottle ) );
 
         moveDirection += MoveThrottle * SimulationRate * Time.deltaTime;
 
@@ -65,9 +63,8 @@ public class MovementController : OVRPlayerController {
         Vector3 predictedXZ = Vector3.Scale( (Controller.transform.localPosition + moveDirection), new Vector3( 1, 0, 1 ) );
 
         // Move contoller
-        //Debug.Log( string.Format( "moveDirection: {0}", moveDirection ) );
-        if ( DebugUI.instance != null )
-            DebugUI.instance.print( string.Format( "moveDirection: {0}", moveDirection ) );
+        Debug.Log( string.Format( "moveDirection: {0}", moveDirection ) );
+
         Controller.Move( moveDirection );
 
         Vector3 actualXZ = Vector3.Scale( Controller.transform.localPosition, new Vector3( 1, 0, 1 ) );
@@ -122,11 +119,10 @@ public class MovementController : OVRPlayerController {
         Vector3 ortEuler = ort.eulerAngles;
         ortEuler.z = ortEuler.x = 0f;
         ort = Quaternion.Euler( ortEuler );
-        if ( DebugUI.instance != null )
-            DebugUI.instance.print( string.Format( "Throttle 1: {0} Initial Value", MoveThrottle ) );
+
 
         if ( moveForward ) {
-            MoveThrottle += ort * ( transform.lossyScale.z * moveInfluence * Vector3.forward ); 
+            MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * Vector3.forward);
         }
         if ( moveBack )
             MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * BackAndSideDampen * Vector3.back);
@@ -137,8 +133,7 @@ public class MovementController : OVRPlayerController {
 
         Vector3 euler = transform.rotation.eulerAngles;
 
-        if ( DebugUI.instance != null )
-            DebugUI.instance.print( string.Format( "Throttle 2: {0} Post Pad input", MoveThrottle ) );
+
 
         bool curHatLeft = OVRInput.Get( OVRInput.Button.PrimaryShoulder );
 
@@ -172,13 +167,12 @@ public class MovementController : OVRPlayerController {
 
         Vector2 primaryAxis = OVRInput.Get( OVRInput.Axis2D.PrimaryThumbstick );
 
-        //Debug.Log( string.Format( "Axis:{0}", primaryAxis ) );
+        Debug.Log( string.Format( "Axis:{0}", primaryAxis ) );
+
 
         MoveThrottle += CameraRig.rightEyeCamera.transform.forward * primaryAxis.y * moveInfluence * BackAndSideDampen * transform.lossyScale.z;
         MoveThrottle += CameraRig.rightEyeCamera.transform.right * primaryAxis.x * moveInfluence * BackAndSideDampen * transform.lossyScale.x;
 
-        if ( DebugUI.instance != null )
-            DebugUI.instance.print( string.Format( "Camera Forward: {0}Right {1}", CameraRig.rightEyeCamera.transform.forward, CameraRig.rightEyeCamera.transform.right ) );
 
         /*
         if ( primaryAxis.y > 0.0f )
@@ -195,17 +189,8 @@ public class MovementController : OVRPlayerController {
         */
         Vector2 secondaryAxis = OVRInput.Get( OVRInput.Axis2D.SecondaryThumbstick );
 
-        if ( DebugUI.instance != null )
-            DebugUI.instance.print( string.Format( "Throttle 3: {0} Post Axis Input", MoveThrottle ) );
 
         euler.y += secondaryAxis.x * rotateInfluence;
-#if UNITY_EDITOR
-        var camAngle = CameraRig.rightEyeCamera.transform.localEulerAngles;
-        camAngle.x = Input.GetAxis( "Mouse Y" ) * Time.deltaTime * 2f;
-        CameraRig.rightEyeCamera.transform.localEulerAngles = camAngle;
-#endif
-
-        //Debug.LogFormat( "Euler Angles: {0}", euler );
 
         transform.rotation = Quaternion.Euler( euler );
     }

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu( menuName = "LevelManager/Status/Create Gravity Data" )]
 public class GravityDescriptor : Descriptor {
-    public event ObjectActivate ActivateGravity;
-    public event ObjectDeactivate DeactivateGravity;
+    public event ObjectActivate ActivateGravity, DeactivateGravity;
     public Vector3 gravityValue, noGravityValue;
     public float shiftDuration = 1;
     public float gravityDuration = 30f;
 
     public void Set( bool on ) {
-        isActive = on;
+        IsActive = on;
         if ( on ) {
             if ( ActivateGravity != null )
                 ActivateGravity( this );
@@ -24,21 +23,21 @@ public class GravityDescriptor : Descriptor {
     }
 
     public void Set( bool on, MonoBehaviour behaviour ) {
-        isActive = on;
+        IsActive = on;
         if ( on ) {
             if ( ActivateGravity != null )
                 ActivateGravity( this );
-            behaviour.StartCoroutine( Activate(behaviour) );
+            behaviour.StartCoroutine( ActivateLerp(behaviour) );
         }
         else {
             if ( DeactivateGravity != null )
                 DeactivateGravity( this );
             behaviour.StopAllCoroutines();
-            behaviour.StartCoroutine( Deactivate(behaviour));
+            behaviour.StartCoroutine( DeactivateLerp(behaviour));
         }
     }
 
-    IEnumerator Activate( MonoBehaviour behaviour ) {
+    IEnumerator ActivateLerp( MonoBehaviour behaviour ) {
         float t = 0;
         float time = Time.timeSinceLevelLoad;
         while ( t < 1f ) {
@@ -48,7 +47,7 @@ public class GravityDescriptor : Descriptor {
         }
     }
 
-    IEnumerator Deactivate( MonoBehaviour behaviour ) {
+    IEnumerator DeactivateLerp( MonoBehaviour behaviour ) {
         float t = 0;
         float time = Time.timeSinceLevelLoad;
         while ( t < 1f ) {
@@ -57,7 +56,7 @@ public class GravityDescriptor : Descriptor {
             t = (Time.timeSinceLevelLoad - time) / shiftDuration;
         }
         yield return new WaitForSeconds( gravityDuration );
-        if ( !isActive ) {
+        if ( !IsActive ) {
             Set( true, behaviour );
         }
     }
