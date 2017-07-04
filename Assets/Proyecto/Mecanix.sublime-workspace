@@ -1,0 +1,1173 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"De",
+				"DebugUI"
+			],
+			[
+				"ingreso",
+				"fechaIngreso"
+			],
+			[
+				"insert",
+				"insertarSimple"
+			],
+			[
+				"busque",
+				"busquedaTutorial"
+			],
+			[
+				"inse",
+				"insertarTutorial"
+			],
+			[
+				"tutori",
+				"tutorialClientes"
+			],
+			[
+				"inser",
+				"insertarSimple"
+			],
+			[
+				"fecha",
+				"fechaIngreso"
+			],
+			[
+				"feca",
+				"fechaIngreso"
+			],
+			[
+				"NO",
+				"NOBORRAR"
+			],
+			[
+				"ID",
+				"idCliente"
+			],
+			[
+				"reporte",
+				"reporteWindow"
+			],
+			[
+				"last",
+				"lastrowid"
+			],
+			[
+				"totalProp",
+				"totalPropinaTarjeta"
+			],
+			[
+				"siguei",
+				"siguienteDia"
+			],
+			[
+				"segu",
+				"SegundoCierre"
+			],
+			[
+				"abri",
+				"abrirVentana"
+			],
+			[
+				"count",
+				"countDocs"
+			],
+			[
+				"coun",
+				"countDocsWords"
+			],
+			[
+				"dat",
+				"datasets"
+			],
+			[
+				"Bea",
+				"BeautifulSoup"
+			],
+			[
+				"s",
+				"split"
+			],
+			[
+				"ap",
+				"apriori"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"k",
+				"k"
+			],
+			[
+				"list",
+				"list"
+			],
+			[
+				"total",
+				"total"
+			],
+			[
+				"T",
+				"transacciones"
+			],
+			[
+				"w",
+				"withdraw"
+			],
+			[
+				"totalPro",
+				"totalPropinaTarjeta"
+			],
+			[
+				"llevo",
+				"dineroLlevo"
+			],
+			[
+				"tex",
+				"textvariable"
+			],
+			[
+				"Cierr",
+				"cierreGUI"
+			],
+			[
+				"repor",
+				"reporteWindow"
+			],
+			[
+				"vena",
+				"ventasTarjeta"
+			],
+			[
+				"mesa",
+				"mesa"
+			],
+			[
+				"totalP",
+				"totalPropinaTarjeta"
+			],
+			[
+				"dinero",
+				"dineroInicial"
+			],
+			[
+				"Sistem",
+				"SistemaTeru"
+			],
+			[
+				"To",
+				"Total"
+			],
+			[
+				"win",
+				"cierreWindow"
+			],
+			[
+				"Sr",
+				"StringVar"
+			],
+			[
+				"ac",
+				"aceptarComanda"
+			],
+			[
+				"clear",
+				"clearConsumo"
+			],
+			[
+				"Sis",
+				"SistemaTeru"
+			],
+			[
+				"GetB",
+				"GetButton(String)\tBoolean"
+			],
+			[
+				"gr",
+				"gravActivada"
+			],
+			[
+				"salto",
+				"saltoActivado"
+			],
+			[
+				"el",
+				"else\tElse"
+			],
+			[
+				"else",
+				"elseif\tElse If"
+			],
+			[
+				"ADd",
+				"AddForce(Vector3)\tVoid"
+			],
+			[
+				"Add",
+				"AddForce(Vector3)\tVoid"
+			],
+			[
+				"gravedad",
+				"gravedadActiva"
+			],
+			[
+				"grave",
+				"gravedadActiva"
+			],
+			[
+				"ma",
+				"magnitude"
+			],
+			[
+				"lon",
+				"longitude"
+			],
+			[
+				"sph",
+				"sphCoord"
+			],
+			[
+				"Sp",
+				"SphereCoordinate(Vector3)\tSphereCoordinate"
+			],
+			[
+				"for",
+				"foreach\tForEach"
+			],
+			[
+				"1",
+				"100"
+			],
+			[
+				"Imag",
+				"ImageDraw"
+			],
+			[
+				"up",
+				"up_left〔variable〕"
+			],
+			[
+				"down",
+				"down_left〔variable〕"
+			],
+			[
+				"do",
+				"down_right〔variable〕"
+			],
+			[
+				"le",
+				"leftmost_of_row〔variable〕"
+			],
+			[
+				"th",
+				"threshold〔function〕"
+			],
+			[
+				"reve",
+				"reverse"
+			],
+			[
+				"rever",
+				"reversed_row"
+			],
+			[
+				"get",
+				"get_uppermost_pixel〔function〕"
+			],
+			[
+				"rig",
+				"rightmost"
+			],
+			[
+				"rightmo",
+				"rightmost_of_row"
+			],
+			[
+				"pixel_",
+				"pixel_negro〔variable〕"
+			],
+			[
+				"count_",
+				"count_width"
+			],
+			[
+				"conteo",
+				"conteo_y"
+			],
+			[
+				"na",
+				"naive_bayes〔function〕"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					""
+				],
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Unity3D Build System/Unity.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/UnityBuild-master/Unity.sublime-build",
+					""
+				],
+				[
+					"Packages/UnityBuild-master/Unity.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/UnityBuild-master/Unity.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "repl",
+		"selected_items":
+		[
+			[
+				"repl",
+				"SublimeREPL: Python"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"repl py",
+				"SublimeREPL: Python"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git log",
+				"Git: Log All"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git reset",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git ",
+				"Git: Status"
+			],
+			[
+				"git staged",
+				"Git: Diff Staged Files"
+			],
+			[
+				"git add ",
+				"Git: Add..."
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git add..",
+				"Git: Add..."
+			],
+			[
+				"git current",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git stage",
+				"Git: Diff Staged Files"
+			],
+			[
+				"python",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"git change ",
+				"Git: Change Branch"
+			],
+			[
+				"git branch",
+				"Git: Change Branch"
+			],
+			[
+				"gg",
+				"Git: Gitk"
+			],
+			[
+				"git bra",
+				"Git: Change Branch"
+			],
+			[
+				"git merge",
+				"Git: Merge Branch"
+			],
+			[
+				"git add cu",
+				"Git: Add Current File"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"python repl",
+				"Build With: python_repl"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"viewer",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package ",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"ipyt",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"ipy",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"git com",
+				"Git: Quick Commit"
+			],
+			[
+				"ipython",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"git che",
+				"Git: Checkout Tag"
+			],
+			[
+				"repl ipyth",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"sublime repl python",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"git commi",
+				"Git: Amend Commit"
+			],
+			[
+				"git stats",
+				"Git: Status"
+			],
+			[
+				"git qu",
+				"Git: Quick Commit"
+			],
+			[
+				"git am",
+				"Git: Amend Commit"
+			],
+			[
+				"git amm",
+				"Git: Amend Commit"
+			],
+			[
+				"git quick",
+				"Git: Quick Commit"
+			],
+			[
+				"git add c",
+				"Git: Add Current File"
+			],
+			[
+				"git",
+				"Git: Diff Current File"
+			],
+			[
+				"git c",
+				"Git: Quick Commit"
+			],
+			[
+				"gitgu",
+				"GitGutter: Compare Against HEAD"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal Key Bindings – User"
+			],
+			[
+				"socket",
+				"SublimeSocket: on"
+			],
+			[
+				"socket on",
+				"SublimeSocket: on"
+			],
+			[
+				"git comm",
+				"Git: Quick Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"socketo",
+				"SublimeSocket: on"
+			],
+			[
+				"socket ",
+				"SublimeSocket: on"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"resou",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"socket off",
+				"SublimeSocket: off"
+			],
+			[
+				"socket o",
+				"SublimeSocket: on"
+			],
+			[
+				"reso",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package res",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"package reso",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"high vis",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"fold",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"comment",
+				"Unfold Comments"
+			],
+			[
+				"toggle",
+				"Toggle Comment"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package re",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"resour",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"git to",
+				"Github: Repository"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"github pl",
+				"Github: Plugin Settings"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packager",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"lint",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"python ",
+				"SublimeREPL: Python"
+			],
+			[
+				"package control",
+				"Package Control: Remove Package"
+			],
+			[
+				"repl pytohn",
+				"SublimeREPL: Python"
+			],
+			[
+				"Package Control Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"view.encoding()",
+			"view.encodinf()",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Assets/GameFiles - Do not change/Scripts/BlockMakerScript.cs",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Assets/GameFiles - Do not change/Scripts/ContactBackgroundFlash.cs",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Assets/GameFiles - Do not change/Scripts/PlayerControl.cs",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Assets/GameFiles - Do not change/Scripts/Hair.cs",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Assets/GameFiles - Do not change/Scripts/AntennaControl.cs",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Assets/GameFiles - Do not change/Scripts/StretchySprite.cs",
+		"/C/Users/TELMEX/Desktop/Juice",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Class",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Unedited",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/2016b/Assets/GameFiles",
+		"/J/Onedrive/Documentos/LEIVA/Curso Dra/-",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/Do",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/not",
+		"/C/Users/TELMEX/Desktop/Juice Class Unedited 2016b/change/Scripts/BlockMakerScript.cs",
+		"/J/Onedrive/Documentos/LEIVA/Curso Dra/papo y yo.txt",
+		"/J/Onedrive/Documentos/LEIVA/Curso Dra/Mario Jumps.txt",
+		"/J/Documents/Mecanix/Assets/Proyecto/Scripts/Enviroment/-",
+		"/J/Documents/Mecanix/Assets/Proyecto/Scripts/Enviroment/PlayerInteractor.cs",
+		"/J/Documents/Mecanix/Assets/Proyecto/Scripts/Enviroment/ItemReceiver.cs",
+		"/J/Documents/Mecanix/Assets/Proyecto/Scripts/UI/DebugUI.cs",
+		"/J/Documents/ProyectoTextos/Parser2.py",
+		"/J/Documents/ProyectoTextos/counter.py",
+		"/J/Documents/ProyectoTextos/index.py",
+		"/J/Documents/ProyectoTextos/README.md",
+		"/J/Documents/ProyectoTextos/CreateTopics.py",
+		"/J/Documents/ProyectoTextos/output.py",
+		"/C/Python33/Lib/site-packages/lda/lda.py",
+		"/C/Users/TELMEX/AppData/Roaming/Sublime Text 3/Packages/User/python_repl.sublime-build",
+		"/J/Documents/ProyectoTextos/raw.es/spanishText_480000_485000",
+		"/J/Documents/ProyectoTextos/raw.es/Parseados/spanishText_10000_15000_PARSED",
+		"/J/Documents/ProyectoTextos/raw.es/Titulos/spanishText_10000_15000_TITLE.json",
+		"/J/Documents/Procesamiento de Textos/Clase 2.ipynb",
+		"/J/Documents/ProyectoTextos/parser.py",
+		"/J/Documents/Procesamiento de Textos/apriori.py",
+		"/J/Documents/Procesamiento de Textos/Clase 1.ipynb",
+		"/J/Documents/Procesamiento de Textos/test2.txt",
+		"/J/Documents/Procesamiento de Textos/test.txt",
+		"/J/Documents/ProyectoTextos/indexmap.json",
+		"/J/Documents/ProyectoTextos/raw.es/Indexados/indexmap.json",
+		"/J/Documents/Procesamiento de Textos/salida.txt",
+		"/J/Documents/Procesamiento de Textos/clase.py",
+		"/J/Documents/Procesamiento de Textos/apriori2.py",
+		"/J/Documents/Procesamiento de Textos/Proyecto/tarea.txt",
+		"/J/Documents/Procesamiento de Textos/indices.json",
+		"/J/Documents/TeruSistema/SublimeTeru.sublime-project",
+		"/J/Documents/TimeDemo2D/Assets/Scripts/Managers/FileManager.cs",
+		"/J/Documents/TimeDemo2D/Assets/Scripts/JSON/FreezeJson.cs",
+		"/J/Documents/wavebeats/Data/data.json",
+		"/J/Documents/TimeDemo2D/Assets/Scripts/JSON/GameStatusJSON.cs",
+		"/J/Documents/papiitv2/Assets/Resources/SPM_PAPIITv1.1.1/Scripts/SemiTrack/SemiTrackCollScript.cs",
+		"/J/Documents/TimeDemo2D/Assets/Scripts/Scene Managament/LoadScene.cs",
+		"/J/Documents/papiitv2/Assets/Resources/SistemaTrafico/Scripts/Spawner/Spawner.cs",
+		"/J/Documents/wavebeats/Data/beatData.json",
+		"/J/Documents/papiitv2/Assets/Resources/SistemaTrafico/Scripts/Spawner/SimpleSpawner.cs",
+		"/J/Documents/TeruSistema/SistemaTeru.py",
+		"/J/Documents/TeruSistema/TeruGUI.pyw",
+		"/C/Users/TELMEX/Desktop/codigo.txt",
+		"/J/Documents/papiitv2/.gitignore",
+		"/C/Python/Añadir_nuevo.txt",
+		"/J/Documents/TeruSistema/README.md",
+		"/J/Documents/TeruSistema/.gitignore",
+		"/J/Documents/TeruSistema/Datos/clientesTeru.db-journal",
+		"/J/Documents/TeruSistema/Datos/conf.json",
+		"/J/Documents/TeruSistema/Comandas/11-4-2016.csv",
+		"/C/Users/TELMEX/OneDrive/Scripts/ss.js",
+		"/I/nose",
+		"/J/Documents/TeruSistema/Comandas/17-3-2016.csv",
+		"/J/Documents/TeruSistema/NOBORRAR.conf",
+		"/C/Users/TELMEX/Desktop/Segunda Clase/bases.py",
+		"/J/Documents/TeruSistema/Datos/.conf",
+		"/C/Users/TELMEX/AppData/Roaming/Sublime Text 3/Packages/Python Breakpoints/PythonBreakpoints.sublime-settings",
+		"/C/Users/TELMEX/AppData/Roaming/Sublime Text 3/Packages/User/PythonBreakpoints.sublime-settings",
+		"/C/Users/TELMEX/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/J/Documents/TeruSistema/arch",
+		"/J/Documents/TeruSistema/Datos/clientesTeru.db",
+		"/C/Users/TELMEX/AppData/Roaming/Sublime Text 3/Packages/Python Breakpoints/Default (Windows).sublime-keymap",
+		"/J/Documents/TeruSistema/Datos/clientes.db",
+		"/J/Documents/TeruSistema/Datos/SistemaDB.py",
+		"/J/Documents/TeruSistema/Datos/Sistema.py",
+		"/J/Documents/TeruSistema-master/SistemaTeru.py",
+		"/C/Users/TELMEX/Desktop/salida.txt",
+		"/C/Users/TELMEX/Desktop/callLog2.csv",
+		"/C/Users/TELMEX/Desktop/callLog.csv",
+		"/J/Documents/JuegoDIMRV/Assets/Scripts/Manager.cs",
+		"/C/Users/TELMEX/Desktop/logFinder.py",
+		"/C/Users/TELMEX/Desktop/finder.py",
+		"/C/Users/TELMEX/Desktop/Fecha.py",
+		"/J/Documents/GGJ2016/Juego2016/.gitignore",
+		"/J/Documents/JuegoDIMRV/Assets/Scripts/RightArmBehavior.cs",
+		"/C/Users/TELMEX/Desktop/salida.csv",
+		"/C/Users/TELMEX/AppData/Local/Temp/callLog.csv",
+		"/C/Users/TELMEX/Desktop/claro.csv",
+		"/C/Users/TELMEX/Desktop/ej.py",
+		"/C/Users/TELMEX/Desktop/ejemplo/CreateTopics.py",
+		"/C/Users/TELMEX/Desktop/untitled.py",
+		"/F/JUEGO/Equupo5.txt",
+		"/C/Users/TELMEX/Desktop/ejemplo/raw.es/Indexados/spanishText_480000_485000_PARSED_INDEXED",
+		"/C/Users/TELMEX/AppData/Local/Temp/resultados_con2000docs.txt",
+		"/C/Users/TELMEX/AppData/Local/Temp/resultadostodoslosdocs.txt",
+		"/C/Users/TELMEX/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Python/Main.sublime-menu",
+		"/C/Users/TELMEX/Desktop/ejemplo/raw.es/spanishText_480000_485000",
+		"/C/Users/TELMEX/AppData/Local/Temp/estructura_salida.txt",
+		"/C/Users/TELMEX/AppData/Local/Temp/estructura_salida-3.txt",
+		"/C/Users/TELMEX/Desktop/ejemplo/Parser2.py",
+		"/C/Users/TELMEX/Desktop/ejemplo/raw.es/Parseados/spanishText_480000_485000_PARSED",
+		"/C/Users/TELMEX/Desktop/ejemplo/raw.es/Titulos/spanishText_480000_485000_TITLE.json",
+		"/J/Documents/ProyectoTextos/raw.es/Indexados/spanishText_90000_95000_PARSED_INDEXED",
+		"/C/Python/SublimePyXX.txt",
+		"/C/Users/TELMEX/AppData/Roaming/Sublime Text 3/Packages/User/Py33x64.sublime-build",
+		"/J/Documents/ProyectoTextos/raw.es/spanishText_10000_15000",
+		"/J/Documents/ProyectoTextos/raw.es/Indexados/spanishText_70000_75000_PARSED_INDEXED",
+		"/J/Documents/ProyectoTextos/lda.py",
+		"/J/Documents/ProyectoTextos/EjemploLDA/salida.txt",
+		"/J/Documents/ProyectoTextos/ind.py",
+		"/C/Users/TELMEX/Desktop/ind.py",
+		"/G/cuenta.py",
+		"/J/Documents/ProyectoTextos/raw.es/Indexados/spanishText_465000_470000_PARSED_INDEXED",
+		"/J/Documents/ProyectoTextos/EjemploLDA/salida.json",
+		"/J/Documents/ProyectoTextos/Limpiador.py",
+		"/J/Documents/ProyectoTextos/ejemplo.txt",
+		"/J/Documents/ProyectoTextos/ejemplo.xml",
+		"/J/Documents/ProyectoTextos/EjemploLDA/indices_wikipedia.json",
+		"/C/Users/TELMEX/AppData/Local/Temp/Untitled.py",
+		"/J/Documents/ProyectoTextos/raw.es/Parseados/spanishText_10000_15000_LIMPIO_PARSED",
+		"/J/Documents/ProyectoTextos/EjemploLDA/notas_separadas_indizadas.txt",
+		"/J/Documents/ProyectoTextos/raw.es/Parseados/spanishText_270000_275000_LIMPIO_PARSED",
+		"/J/Documents/Procesamiento de Textos/Untitled.ipynb",
+		"/I/descripcionPython.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"UpdateTouches",
+			"touchingUp",
+			"numWords",
+			"Parsing",
+			"re",
+			"mb",
+			"col",
+			"activeRow",
+			"initDocument",
+			"confirmar",
+			"Comandas",
+			"commitComanda",
+			"cobro",
+			"ERROR",
+			"buscarID",
+			"nombreArchivo",
+			"incConsumo",
+			"incVisitas",
+			"incre",
+			"Comanda",
+			"mb",
+			"primer",
+			"conf.json",
+			"'''",
+			"%",
+			"%f",
+			"%s",
+			"{}",
+			"%f",
+			"%",
+			".conf\"",
+			"clientesDB",
+			"self.sistema[\"visitas\"]",
+			"sistema[\"visitas\"]",
+			"contador",
+			"print",
+			".dll",
+			"Llamó",
+			"print",
+			"py33",
+			"top topic: 4",
+			"bueno, aires",
+			"py32",
+			"python",
+			"ListTrans",
+			"paramRotation",
+			"valueRotation",
+			".obj",
+			"diffuse",
+			"Ns",
+			"obj",
+			"Ns",
+			"glEnable",
+			"wrl",
+			"obj",
+			"CAMERASPEED",
+			"display",
+			"mtl",
+			"f",
+			"ActualizaPosCamara",
+			"paralelos",
+			"paralelosRes",
+			"meridianosRes",
+			"ActualizaPosCamara",
+			"cArcBall",
+			"arc",
+			"camara",
+			"ActualizaPosCamara",
+			"CAMERASPEED",
+			"auxCamara",
+			"lookat",
+			"unity",
+			"usemtl",
+			"o",
+			"g",
+			"usemtl",
+			"None",
+			"usemtl",
+			"prestamos",
+			"prestamo",
+			"prestamos",
+			"mes",
+			"neto",
+			"Total",
+			"vt",
+			"print",
+			"opener",
+			"print",
+			"print(\"C: \" + str(candidate))",
+			"print",
+			"Counter",
+			"MIN_SUPPORT",
+			"wordCounter",
+			"import",
+			"encoding",
+			"tokens",
+			"01",
+			"callSystem",
+			"spreadsheet",
+			"Teru Sistema",
+			"aceptarComanda",
+			"cierreWindow",
+			"self.dinero",
+			"show",
+			"confirmacionCierre",
+			"ventas",
+			"folio",
+			"MainGUI",
+			"propinaContada",
+			"propinaEfectivo",
+			"totalPropina",
+			"pago",
+			"help(tk",
+			"propina",
+			"dinero",
+			"Sumar",
+			"añadir",
+			"self.strVar[\"Total\"]",
+			"self.strVar[\"Propina\"]",
+			"self.strVar[\"Propina\"] = tk.StringVar()",
+			"self.strVar[\"Recibido\"]",
+			"self.strVar[\"Clientes\"]",
+			"self.numClientes",
+			"self.strVar[\"Clientes\"]",
+			"self.strVar[\"Dia\"]",
+			"self.strVar[\"Dia\"] = tk.StringVar()",
+			"self.strVar[\"Dia\"]",
+			"self.strVar[\"Nomina\"]"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"nombreArchivoExcel",
+			"tutorialInicio",
+			"\"",
+			".format",
+			"{}",
+			"conf.json\"",
+			"conf.json",
+			"sistema[\"visitas\"]",
+			"Llamada",
+			"py33_64",
+			"py33",
+			"tokenList",
+			"confirmarComanda",
+			"master",
+			"showMain",
+			"datosCierre",
+			"ventasEfectivo",
+			"nombreMesa",
+			"MesaGUI",
+			"propinaContada",
+			"totalPropinaEfectivo",
+			"Calcular",
+			"agregar",
+			"self.total",
+			"self.propina",
+			"self.dinRecibido",
+			"self.numClientes",
+			"self.dia",
+			"self.nomina",
+			"self.gastos",
+			"self.dinero",
+			"sistema",
+			"self.consWindow",
+			"self.resultWindow",
+			"textoConsumo",
+			"self.texto",
+			"y",
+			"x",
+			"place",
+			"carro",
+			"gravedadActivada",
+			"",
+			"Mathf",
+			"ro",
+			"SphereCoordinate",
+			"PolarCoordinate3",
+			"latitude",
+			"longitude",
+			"longitud",
+			"latitud",
+			"anguloX",
+			"get_cuadro_img",
+			"",
+			"\\\\"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 328.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "Packages/User/python_repl.sublime-build",
+	"project": "Mecanix.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"repl",
+				"*REPL* [python]"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 365.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

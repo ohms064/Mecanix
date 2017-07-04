@@ -7,6 +7,13 @@ public class ItemReceiver : InteractiveBehaviour {
 
     [SerializeField] protected ReceiverDescriptor data;
     [SerializeField] protected InteractiveBehaviour[] effect;
+    Material material;
+    public Color activeColor;
+
+    void Start(){
+        material = GetComponent<Renderer>().material;
+        data.Activate += OnActive;
+    }
 
     public override void Interact( PlayerInteractor interactor ) {
         if ( interactor.grabbedObjectData == null ) {
@@ -34,5 +41,9 @@ public class ItemReceiver : InteractiveBehaviour {
     }
 
     public override void Restart() {
+    }
+
+    public void OnActive(Descriptor desc){
+        material.color = activeColor;
     }
 }
