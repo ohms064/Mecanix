@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu( menuName = "LevelManager/Objects/Create Piloto" )]
-class PilotoDescriptor : ReceiverDescriptor {
+public class PilotoDescriptor : ReceiverDescriptor {
     public Descriptor[] requiredObjects;
     [TextArea( 5, 10 )]
     public string successText, failedText;

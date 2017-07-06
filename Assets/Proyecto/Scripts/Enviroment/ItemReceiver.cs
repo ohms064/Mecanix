@@ -45,6 +45,7 @@ public class ItemReceiver : InteractiveBehaviour {
     }
 
     public void OnActive(Descriptor desc){
+        if (material == null) return;
         material.color = activeColor;
     }
 }

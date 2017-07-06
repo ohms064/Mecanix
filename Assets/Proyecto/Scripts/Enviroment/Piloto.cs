@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Piloto : ItemReceiver {
+    
     public override void Interact( PlayerInteractor interactor ) {
-        if ( (data as PilotoDescriptor).canActivate() ) {
+        PilotoDescriptor pilot = (data as PilotoDescriptor);
+        if(pilot == null) {
+            return;
+        }
+        if ( pilot.canActivate() ) {
+            DebugUI.instance.Log(pilot.activeDescription);
             return;
         }
         base.Interact( interactor );
