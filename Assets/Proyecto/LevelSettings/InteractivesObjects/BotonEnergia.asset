@@ -11,11 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc666e6ba5aa0c44934f8a9971795e2, type: 3}
   m_Name: BotonEnergia
   m_EditorClassIdentifier: 
+  events: []
   label: "Bot\xF3n"
-  isActive: 0
+  _isActive: 0
   initialActive: 0
+  description: "Bot\xF3n que controla la energ\xEDa"
+  activeDescription: Ya hay electricidad!
   requiredObjects:
   - {fileID: 11400000, guid: b11242f854877e541bfdb11710786731, type: 2}
   - {fileID: 11400000, guid: 63fec9b2b37783e4780cf005d055613d, type: 2}
   successText: Ya hay electricidad!
-  failedText: "No pas\xF3 nada"
+  failedText: "No pas\xF3 nada al presionar el bot\xF3n"

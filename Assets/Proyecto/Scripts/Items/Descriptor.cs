@@ -6,6 +6,8 @@ using UnityEngine;
 public class Descriptor : ScriptableObject {
     public delegate void ObjectActivate( Descriptor descriptor );
     public event ObjectActivate Activate, Deactivate;
+    public EventDescriptor[] events;
+
     public string label;
     public bool IsActive {
         get {
@@ -33,5 +35,12 @@ public class Descriptor : ScriptableObject {
 
     public virtual void Reset() {
         IsActive = initialActive;
-    }    
+    }  
+    
+    public void SubscribeToEvents() {
+        for(int i = 0; i < events.Length; i++) {
+            Activate += events[i].OnActivate;
+            Deactivate += events[i].OnDeactivate;
+        }
+    }  
 }

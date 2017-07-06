@@ -10,7 +10,8 @@ public class ItemReceiver : InteractiveBehaviour {
     Material material;
     public Color activeColor;
 
-    void Start(){
+    public override void Start(){
+        base.Start();
         material = GetComponent<Renderer>().material;
         data.Activate += OnActive;
     }

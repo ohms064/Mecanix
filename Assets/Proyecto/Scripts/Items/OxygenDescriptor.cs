@@ -22,6 +22,7 @@ public class OxygenDescriptor : Descriptor {
     public void Begin() {
         nivelOxigeno = maxOxigeno;
         status = OxygenStatus.START;
+        IsActive = true;
     }
 
     public void Set( float delta ) {

@@ -8,12 +8,15 @@ public class Door : InteractiveBehaviour {
     public DoorDescriptor data;
     [SerializeField] DoorTrigger trigger;
     [SerializeField] protected float animationDuration = 1f, openDuration;
-    protected bool isAnimating = false, isOpen = false;
+    protected bool isAnimating = false;
+    public bool isOpen = false;
     protected Vector3 origin;
     [SerializeField] protected Vector3 destiny;
 
-    protected void Start() {
+    public override void Start() {
+        base.Start();
         origin = transform.position;
+        destiny += origin;
     }
 
     public override void Interact( PlayerInteractor interactor ) {
@@ -65,12 +68,18 @@ public class Door : InteractiveBehaviour {
     protected void OnEnable() {
         data.SceneLoadingFinish += OnSceneLoaded;
         data.StartSceneLoading += OnSceneLoadStart;
+        for(int i = 0; i < events.Length; i++) {
+            data.SceneLoadingFinish += events[i].StartEvent;
+        }
     }
 
     // This function is called when the behaviour becomes disabled or inactive
     protected void OnDisable() {
         data.SceneLoadingFinish -= OnSceneLoaded;
         data.StartSceneLoading -= OnSceneLoadStart;
+        for (int i = 0; i < events.Length; i++) {
+            data.SceneLoadingFinish -= events[i].StartEvent;
+        }
     }
 
     public void OnSceneLoaded() {

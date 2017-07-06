@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: d630f4d1fe17be24a961049986e0c59b
+timeCreated: 1499364429
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Aleta
+    100002: Base_Boton
+    100004: boton_expulsion
+    100006: Caja
+    100008: Cinta
+    100010: cupula_fracmentos
+    100012: cupulas
+    100014: cupulas001_Part_10
+    100016: cupulas001_Part_7
+    100018: Cylinder002
+    100020: Engrane
+    100022: Estructura_cabina
+    100024: Indicador_oxigeno
+    100026: Mascara_Oxigeno
+    100028: Meteorito_1
+    100030: Meteorito_2
+    100032: Meteorito_3
+    100034: Nave_espacial
+    100036: //RootNode
+    100038: Object002
+    100040: palanca_gravedad
+    100042: Panel_cables_luz
+    100044: Panel_control
+    100046: Particle View 001
+    100048: piloto
+    100050: Piso
+    100052: pUERTA tRASERA
+    100054: Puerta_2
+    100056: Puerta_4
+    100058: Puerta_6
+    100060: Puerta_7
+    100062: Puerta_8
+    100064: Puerta_9
+    100066: Sombrero
+    100068: Vidrio_Nave
+    400000: Aleta
+    400002: Base_Boton
+    400004: boton_expulsion
+    400006: Caja
+    400008: Cinta
+    400010: cupula_fracmentos
+    400012: cupulas
+    400014: cupulas001_Part_10
+    400016: cupulas001_Part_7
+    400018: Cylinder002
+    400020: Engrane
+    400022: Estructura_cabina
+    400024: Indicador_oxigeno
+    400026: Mascara_Oxigeno
+    400028: Meteorito_1
+    400030: Meteorito_2
+    400032: Meteorito_3
+    400034: Nave_espacial
+    400036: //RootNode
+    400038: Object002
+    400040: palanca_gravedad
+    400042: Panel_cables_luz
+    400044: Panel_control
+    400046: Particle View 001
+    400048: piloto
+    400050: Piso
+    400052: pUERTA tRASERA
+    400054: Puerta_2
+    400056: Puerta_4
+    400058: Puerta_6
+    400060: Puerta_7
+    400062: Puerta_8
+    400064: Puerta_9
+    400066: Sombrero
+    400068: Vidrio_Nave
+    2300000: Aleta
+    2300002: Base_Boton
+    2300004: boton_expulsion
+    2300006: Caja
+    2300008: Cinta
+    2300010: cupula_fracmentos
+    2300012: cupulas
+    2300014: Cylinder002
+    2300016: Engrane
+    2300018: Estructura_cabina
+    2300020: Indicador_oxigeno
+    2300022: Mascara_Oxigeno
+    2300024: Meteorito_1
+    2300026: Meteorito_2
+    2300028: Meteorito_3
+    2300030: Nave_espacial
+    2300032: Object002
+    2300034: palanca_gravedad
+    2300036: Panel_cables_luz
+    2300038: Panel_control
+    2300040: Piso
+    2300042: Puerta_2
+    2300044: Puerta_4
+    2300046: Puerta_6
+    2300048: Puerta_7
+    2300050: Puerta_8
+    2300052: Puerta_9
+    2300054: Sombrero
+    2300056: Vidrio_Nave
+    3300000: Aleta
+    3300002: Base_Boton
+    3300004: boton_expulsion
+    3300006: Caja
+    3300008: Cinta
+    3300010: cupula_fracmentos
+    3300012: cupulas
+    3300014: Cylinder002
+    3300016: Engrane
+    3300018: Estructura_cabina
+    3300020: Indicador_oxigeno
+    3300022: Mascara_Oxigeno
+    3300024: Meteorito_1
+    3300026: Meteorito_2
+    3300028: Meteorito_3
+    3300030: Nave_espacial
+    3300032: Object002
+    3300034: palanca_gravedad
+    3300036: Panel_cables_luz
+    3300038: Panel_control
+    3300040: Piso
+    3300042: Puerta_2
+    3300044: Puerta_4
+    3300046: Puerta_6
+    3300048: Puerta_7
+    3300050: Puerta_8
+    3300052: Puerta_9
+    3300054: Sombrero
+    3300056: Vidrio_Nave
+    4300000: Sombrero
+    4300002: Cylinder002
+    4300004: Object002
+    4300006: Vidrio_Nave
+    4300008: Estructura_cabina
+    4300010: Panel_cables_luz
+    4300012: Panel_control
+    4300014: Mascara_Oxigeno
+    4300016: Nave_espacial
+    4300018: Puerta_2
+    4300020: Puerta_4
+    4300022: Puerta_6
+    4300024: cupulas
+    4300026: Aleta
+    4300028: Piso
+    4300030: cupula_fracmentos
+    4300032: Meteorito_1
+    4300034: Meteorito_2
+    4300036: Meteorito_3
+    4300038: Indicador_oxigeno
+    4300040: palanca_gravedad
+    4300042: Caja
+    4300044: Base_Boton
+    4300046: boton_expulsion
+    4300048: Engrane
+    4300050: Cinta
+    4300052: Puerta_7
+    4300054: Puerta_8
+    4300056: Puerta_9
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

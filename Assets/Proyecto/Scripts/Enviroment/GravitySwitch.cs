@@ -24,7 +24,10 @@ public class GravitySwitch : InteractiveBehaviour {
 
 
     public override void Interact( PlayerInteractor interactor ) {
-        on = !on;
+        if (on) {
+            return;
+        }
+        on = false;
         descriptor.Set( on, this );
     }
 

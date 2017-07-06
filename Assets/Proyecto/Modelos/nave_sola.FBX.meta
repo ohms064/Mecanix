@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 87d4b5fdaab0b7b4cbaf19ed3a0a0173
+timeCreated: 1499363054
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Aleta
+    100002: Base_Boton
+    100004: boton_expulsion
+    100006: Caja
+    100008: Cinta
+    100010: Collider_nave
+    100012: cupula_fracmentos
+    100014: cupulas
+    100016: cupulas001_Part_10
+    100018: cupulas001_Part_7
+    100020: Cylinder002
+    100022: Engrane
+    100024: Estructura_cabina
+    100026: Indicador_oxigeno
+    100028: Mascara_Oxigeno
+    100030: Meteorito_1
+    100032: Meteorito_2
+    100034: Meteorito_3
+    100036: Nave_espacial
+    100038: //RootNode
+    100040: Object002
+    100042: palanca_gravedad
+    100044: Panel_cables_luz
+    100046: Panel_control
+    100048: Particle View 001
+    100050: piloto
+    100052: Piso
+    100054: pUERTA tRASERA
+    100056: Puerta_1
+    100058: Puerta_2
+    100060: Puerta_3
+    100062: Puerta_4
+    100064: Puerta_5
+    100066: Puerta_6
+    100068: Sombrero
+    100070: Vidrio_Nave
+    400000: Aleta
+    400002: Base_Boton
+    400004: boton_expulsion
+    400006: Caja
+    400008: Cinta
+    400010: Collider_nave
+    400012: cupula_fracmentos
+    400014: cupulas
+    400016: cupulas001_Part_10
+    400018: cupulas001_Part_7
+    400020: Cylinder002
+    400022: Engrane
+    400024: Estructura_cabina
+    400026: Indicador_oxigeno
+    400028: Mascara_Oxigeno
+    400030: Meteorito_1
+    400032: Meteorito_2
+    400034: Meteorito_3
+    400036: Nave_espacial
+    400038: //RootNode
+    400040: Object002
+    400042: palanca_gravedad
+    400044: Panel_cables_luz
+    400046: Panel_control
+    400048: Particle View 001
+    400050: piloto
+    400052: Piso
+    400054: pUERTA tRASERA
+    400056: Puerta_1
+    400058: Puerta_2
+    400060: Puerta_3
+    400062: Puerta_4
+    400064: Puerta_5
+    400066: Puerta_6
+    400068: Sombrero
+    400070: Vidrio_Nave
+    2300000: Aleta
+    2300002: Base_Boton
+    2300004: boton_expulsion
+    2300006: Caja
+    2300008: Cinta
+    2300010: Collider_nave
+    2300012: cupula_fracmentos
+    2300014: cupulas
+    2300016: Cylinder002
+    2300018: Engrane
+    2300020: Estructura_cabina
+    2300022: Indicador_oxigeno
+    2300024: Mascara_Oxigeno
+    2300026: Meteorito_1
+    2300028: Meteorito_2
+    2300030: Meteorito_3
+    2300032: Nave_espacial
+    2300034: Object002
+    2300036: palanca_gravedad
+    2300038: Panel_cables_luz
+    2300040: Panel_control
+    2300042: Piso
+    2300044: Puerta_1
+    2300046: Puerta_2
+    2300048: Puerta_3
+    2300050: Puerta_4
+    2300052: Puerta_5
+    2300054: Puerta_6
+    2300056: Sombrero
+    2300058: Vidrio_Nave
+    3300000: Aleta
+    3300002: Base_Boton
+    3300004: boton_expulsion
+    3300006: Caja
+    3300008: Cinta
+    3300010: Collider_nave
+    3300012: cupula_fracmentos
+    3300014: cupulas
+    3300016: Cylinder002
+    3300018: Engrane
+    3300020: Estructura_cabina
+    3300022: Indicador_oxigeno
+    3300024: Mascara_Oxigeno
+    3300026: Meteorito_1
+    3300028: Meteorito_2
+    3300030: Meteorito_3
+    3300032: Nave_espacial
+    3300034: Object002
+    3300036: palanca_gravedad
+    3300038: Panel_cables_luz
+    3300040: Panel_control
+    3300042: Piso
+    3300044: Puerta_1
+    3300046: Puerta_2
+    3300048: Puerta_3
+    3300050: Puerta_4
+    3300052: Puerta_5
+    3300054: Puerta_6
+    3300056: Sombrero
+    3300058: Vidrio_Nave
+    4300000: Sombrero
+    4300002: Cylinder002
+    4300004: Object002
+    4300006: Collider_nave
+    4300008: Vidrio_Nave
+    4300010: Estructura_cabina
+    4300012: Panel_cables_luz
+    4300014: Panel_control
+    4300016: Mascara_Oxigeno
+    4300018: Nave_espacial
+    4300020: Puerta_2
+    4300022: Puerta_4
+    4300024: Puerta_3
+    4300026: Puerta_1
+    4300028: Puerta_6
+    4300030: Puerta_5
+    4300032: cupulas
+    4300034: Aleta
+    4300036: Piso
+    4300038: cupula_fracmentos
+    4300040: Meteorito_1
+    4300042: Meteorito_2
+    4300044: Meteorito_3
+    4300046: Indicador_oxigeno
+    4300048: palanca_gravedad
+    4300050: Caja
+    4300052: Base_Boton
+    4300054: boton_expulsion
+    4300056: Engrane
+    4300058: Cinta
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

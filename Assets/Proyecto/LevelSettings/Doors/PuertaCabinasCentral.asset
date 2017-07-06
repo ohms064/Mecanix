@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52f05ddadd65214f87bf703ad9cad4e, type: 3}
   m_Name: PuertaCabinasCentral
   m_EditorClassIdentifier: 
+  events: []
   label: CabinasCentral
-  isActive: 0
+  _isActive: 1
   initialActive: 0
   description: 
+  activeDescription: 
   doorDelay: 0.5

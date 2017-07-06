@@ -15,6 +15,7 @@ public class DebugUI : MonoBehaviour {
 	}
 
     public void Log( string text ) {
+        /*
         debug.text += string.Format("{0}\n",text);
         lines++;
         if ( lines > maxLines ) {
@@ -24,5 +25,8 @@ public class DebugUI : MonoBehaviour {
             debug.text = debugText;
         }
         Debug.Log( text );
+        */
+        debug.text = string.Format("{0}\n", text);
+        Debug.Log(text);
     }
 }

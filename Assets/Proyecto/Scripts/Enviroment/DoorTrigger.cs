@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DoorTrigger : InteractiveBehaviour {
     [HideInInspector]public bool isInside;
-    public Door door;
+    public Door[] door;
 
     public override void Interact( PlayerInteractor interactor ) {
         
@@ -20,8 +20,16 @@ public class DoorTrigger : InteractiveBehaviour {
     }
 
     private void OnTriggerEnter( Collider other ) {
+        for(int i = 0; i < door.Length; i++) {
+            if (door[i].isOpen) {
+                return;
+            }
+        }
         isInside = true;
-        door.Interact(this);
+        for(int i = 0; i < door.Length; i++) {
+            door[i].Interact(this);
+        }
+        
     }
 
     private void OnTriggerExit( Collider other ) {

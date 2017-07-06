@@ -6,12 +6,16 @@ public class DoorTriggerHold : DoorTrigger {
     private void OnTriggerEnter( Collider other ) {
         isInside = true;
         message = true;
-        door.Interact( this );
+        for(int i = 0; i < door.Length; i++) {
+            door[i].Interact(this);
+        }
     }
 
     private void OnTriggerExit( Collider other ) {
         isInside = false;
         message = false;
-        door.Interact( this );
+        for (int i = 0; i < door.Length; i++) {
+            door[i].Interact(this);
+        }
     }
 }

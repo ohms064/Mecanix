@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cf57f5fd97fa2419391957f56edcd3, type: 3}
   m_Name: CablesCortados
   m_EditorClassIdentifier: 
+  events:
+  - {fileID: 0}
   label: Cables
-  isActive: 1
+  _isActive: 0
   initialActive: 0
   description: "Los cables est\xE1n cortados"
   activeDescription: "Los cables ya est\xE1n conectados."
