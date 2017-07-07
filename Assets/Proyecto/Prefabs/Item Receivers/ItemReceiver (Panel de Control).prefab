@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4263651035321400}
   - component: {fileID: 82573564280058046}
+  - component: {fileID: 114205798005841918}
   m_Layer: 11
-  m_Name: Correct (1)
+  m_Name: AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,16 +38,32 @@ GameObject:
   - component: {fileID: 4824476926136890}
   - component: {fileID: 114909434361671188}
   - component: {fileID: 114587387154692296}
-  - component: {fileID: 114858515125608450}
   - component: {fileID: 23122850607525636}
   - component: {fileID: 33740915527913192}
   - component: {fileID: 65180507503127970}
+  - component: {fileID: 114855032819799020}
   m_Layer: 11
   m_Name: ItemReceiver (Panel de Control)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1394915112980564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4224251593570042}
+  - component: {fileID: 135543216034148280}
+  m_Layer: 12
+  m_Name: UITrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1671694848058962
 GameObject:
@@ -85,6 +102,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!4 &4224251593570042
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394915112980564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4824476926136890}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4263651035321400
 Transform:
   m_ObjectHideFlags: 1
@@ -110,6 +140,7 @@ Transform:
   m_Children:
   - {fileID: 4263651035321400}
   - {fileID: 224682925466400116}
+  - {fileID: 4224251593570042}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
@@ -184,7 +215,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 2.4516106
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -244,6 +275,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114205798005841918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031166976709252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0260ca87e81ddc34da1fdf906ebff701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inactive:
+    clip: {fileID: 0}
+    loop: 0
+  active:
+    clip: {fileID: 0}
+    loop: 0
+  onStart:
+    clip: {fileID: 0}
+    loop: 0
 --- !u!114 &114587387154692296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,10 +307,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: 0
-  events: []
+  events:
+  - {fileID: 114205798005841918}
+  - {fileID: 114855032819799020}
   data: {fileID: 11400000, guid: 63fec9b2b37783e4780cf005d055613d, type: 2}
   effect: []
-  activeColor: {r: 0.6862745, g: 0.5372549, b: 1, a: 0}
 --- !u!114 &114598521117904040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,7 +393,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114858515125608450
+--- !u!114 &114855032819799020
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -349,13 +401,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1339444728516158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0260ca87e81ddc34da1fdf906ebff701, type: 3}
+  m_Script: {fileID: 11500000, guid: e595916b44c08f74ba553d5833d17320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptor: {fileID: 11400000, guid: 63fec9b2b37783e4780cf005d055613d, type: 2}
-  inactive: {fileID: 0}
-  onActive: {fileID: 82573564280058046}
-  onStart: {fileID: 0}
+  active: {r: 0.2509804, g: 0.4745098, b: 0.91764706, a: 0}
 --- !u!114 &114909434361671188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,6 +428,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descriptor: {fileID: 11400000, guid: 63fec9b2b37783e4780cf005d055613d, type: 2}
+--- !u!135 &135543216034148280
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394915112980564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.18
+  m_Center: {x: -0.000000044703484, y: 0, z: 0}
 --- !u!222 &222496022225034504
 CanvasRenderer:
   m_ObjectHideFlags: 1

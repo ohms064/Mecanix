@@ -6,14 +6,13 @@ public class PilotoDescriptor : ReceiverDescriptor {
     [TextArea( 5, 10 )]
     public string successText, failedText;
 
-    public new bool canActivate() {
+    public bool canActivate() {
         for ( int i = 0; i < requiredObjects.Length; i++ ) {
             if ( !requiredObjects[i].IsActive ) {
                 DebugUI.instance.Log( failedText );
                 return false;
             }
         }
-        DebugUI.instance.Log( successText );
         return true;
     }
 }

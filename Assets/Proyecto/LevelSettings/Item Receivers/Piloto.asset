@@ -11,10 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802ba09b5bb40014c97640ec83eed083, type: 3}
   m_Name: Piloto
   m_EditorClassIdentifier: 
+  events: []
   label: Piloto
-  isActive: 1
+  _isActive: 1
   initialActive: 0
-  description: 
+  description: Es el piloto de la nave.
+  activeDescription: "El piloto ya tiene la m\xE1scara."
   itemInteractions:
     item: {fileID: 11400000, guid: f683c091b7edfab4e97cd65aaf8a7c77, type: 2}
     correctText: "Se puso la m\xE1scara al piloto"

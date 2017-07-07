@@ -10,7 +10,7 @@ public class Piloto : ItemReceiver {
             return;
         }
         if ( pilot.canActivate() ) {
-            DebugUI.instance.Log(pilot.activeDescription);
+            DebugUI.instance.Log(pilot.successText);
             return;
         }
         base.Interact( interactor );

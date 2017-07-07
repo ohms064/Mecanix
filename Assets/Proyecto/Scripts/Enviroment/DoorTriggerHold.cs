@@ -6,7 +6,7 @@ public class DoorTriggerHold : DoorTrigger {
     private void OnTriggerEnter( Collider other ) {
         isInside = true;
         message = true;
-        for(int i = 0; i < door.Length; i++) {
+        for (int i = 0; i < door.Length; i++) {
             door[i].Interact(this);
         }
     }

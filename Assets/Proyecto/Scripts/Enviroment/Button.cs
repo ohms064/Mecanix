@@ -7,10 +7,9 @@ public class Button : InteractiveBehaviour {
     public InteractorDescriptor data;
     public InteractiveBehaviour[] effect;
     Material material;
-    public Color activeColor;
-    void Start(){
-        material = GetComponent<Renderer>().material;
-        data.Activate += OnActivate;
+    public override void Start(){
+        base.Start();
+        material = GetComponent<Renderer>().material;        
     }
 
     public override void Interact( PlayerInteractor interactor ) {
@@ -24,10 +23,6 @@ public class Button : InteractiveBehaviour {
 
     public override void Restart() {
         
-    }
-
-    public void OnActivate(Descriptor descriptor){
-        material.color = activeColor;
     }
 
     private void Activate() {
@@ -46,6 +41,20 @@ public class Button : InteractiveBehaviour {
         DebugUI.instance.Log( data.successText );
         for ( int i = 0; i < effect.Length; i++ ) {
             effect[i].Interact( this );
+        }
+    }
+
+    private void OnEnable() {
+        for ( int i = 0; i < events.Length; i++ ) {
+            data.Activate += events[i].OnActivate;
+            data.Deactivate += events[i].OnDeactivate;
+        }
+    }
+
+    private void OnDisable() {
+        for ( int i = 0; i < events.Length; i++ ) {
+            data.Activate -= events[i].OnActivate;
+            data.Deactivate -= events[i].OnDeactivate;
         }
     }
 }

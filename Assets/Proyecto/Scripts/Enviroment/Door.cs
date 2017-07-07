@@ -37,6 +37,9 @@ public class Door : InteractiveBehaviour {
     protected virtual IEnumerator Open() {
         float t = 0;
         float beginTime = Time.timeSinceLevelLoad;
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].StartEvent();
+        }
         while ( t < 1 ) {
             t = (Time.timeSinceLevelLoad - beginTime) / animationDuration;
             transform.position = Vector3.Lerp( origin, destiny, t );
@@ -54,6 +57,9 @@ public class Door : InteractiveBehaviour {
         float t = 0;
         float beginTime = Time.timeSinceLevelLoad;
         isAnimating = true;
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].EndEvent();
+        }
         while ( t < 1 ) {
             t = (Time.timeSinceLevelLoad - beginTime) / animationDuration;
             transform.position = Vector3.Lerp( destiny, origin, t );
@@ -61,6 +67,9 @@ public class Door : InteractiveBehaviour {
         }
         isAnimating = false;
         isOpen = false;
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].EndEvent();
+        }
         //isRightScene = GameManager.instance.player.transform.position.x - transform.position.x > 0; // false if player is on left of the door
     }
 
@@ -68,22 +77,19 @@ public class Door : InteractiveBehaviour {
     protected void OnEnable() {
         data.SceneLoadingFinish += OnSceneLoaded;
         data.StartSceneLoading += OnSceneLoadStart;
-        for(int i = 0; i < events.Length; i++) {
-            data.SceneLoadingFinish += events[i].StartEvent;
-        }
     }
 
     // This function is called when the behaviour becomes disabled or inactive
     protected void OnDisable() {
         data.SceneLoadingFinish -= OnSceneLoaded;
         data.StartSceneLoading -= OnSceneLoadStart;
-        for (int i = 0; i < events.Length; i++) {
-            data.SceneLoadingFinish -= events[i].StartEvent;
-        }
     }
 
     public void OnSceneLoaded() {
         GetComponent<MeshRenderer>().material.color = Color.yellow;
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].StartEvent();
+        }
         StartCoroutine( "Open" );
     }
 

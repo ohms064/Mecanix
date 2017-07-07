@@ -12,6 +12,7 @@ public class PlayerInteractor : MonoBehaviour {
     const int ITEM_LAYER = 9;
     [HideInInspector] public bool secondInteraction;
     public OVRInput.Button button = OVRInput.Button.One;
+    [SerializeField] EventBehaviour[] events;
 
 	// Use this for initialization
 	void Start () {
@@ -61,6 +62,9 @@ public class PlayerInteractor : MonoBehaviour {
         grabbedObject.parent = null;
         grabbedObject = null;
         grabbedObjectData = null;
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].EndEvent();
+        }
         return droppedObject;
     }
 
@@ -72,6 +76,9 @@ public class PlayerInteractor : MonoBehaviour {
         grabbedObjectData = hit;
         grabbedObject.position = grabPosition.position;
         grabbedObject.parent = grabPosition; //TODO: This must be temporal!
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].OnActivate(hit.data);
+        }
     }
 
 #if UNITY_EDITOR

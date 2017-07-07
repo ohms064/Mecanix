@@ -6,7 +6,7 @@ using UnityEngine;
 public class Descriptor : ScriptableObject {
     public delegate void ObjectActivate( Descriptor descriptor );
     public event ObjectActivate Activate, Deactivate;
-    public EventDescriptor[] events;
+    public EventBehaviour[] events;
 
     public string label;
     public bool IsActive {

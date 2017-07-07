@@ -5,20 +5,16 @@ using UnityEngine;
 
 public class GravitySwitch : InteractiveBehaviour {
     [SerializeField] GravityDescriptor descriptor;
-    private bool on = true;
-    Material material;
-    public Color activeColor;
-    Color inactiveColor;
+    private bool on = false;
 
     private void Awake() {
         Physics.gravity = descriptor.gravityValue;
     }
 
     
-    void Start(){
-        material = GetComponent<Renderer>().material;
+    public override void Start(){
+        base.Start();
         descriptor.ActivateGravity += OnActivate;
-        inactiveColor = material.color;
         descriptor.DeactivateGravity += OnDeactivate;
     }
 
@@ -27,7 +23,6 @@ public class GravitySwitch : InteractiveBehaviour {
         if (on) {
             return;
         }
-        on = false;
         descriptor.Set( on, this );
     }
 
@@ -40,10 +35,15 @@ public class GravitySwitch : InteractiveBehaviour {
     }
 
     public void OnActivate(Descriptor descriptor){
-        material.color = activeColor;
+        on = false;
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].OnActivate( descriptor );
+        }
     }
 
     public void OnDeactivate(Descriptor descriptor){
-        material.color = inactiveColor;
+        for ( int i = 0; i < events.Length; i++ ) {
+            events[i].OnDeactivate( descriptor );
+        }
     }
 }

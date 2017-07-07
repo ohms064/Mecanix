@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Switch : InteractiveBehaviour {
     [SerializeField] InteractorDescriptor data;
-    [SerializeField] InteractiveBehaviour objectToInteract;
+    [SerializeField] InteractiveBehaviour[] objectsToInteract;
 
     public override void Interact( PlayerInteractor interactor ) {
         
@@ -24,7 +24,10 @@ public class Switch : InteractiveBehaviour {
             return;
         }
         message = true;
-        objectToInteract.Interact( this );
+        for ( int i = 0; i < objectsToInteract.Length; i++ ) {
+            objectsToInteract[i].Interact( this );
+        }
+        
     }
 
     private void OnCollisionExit( Collision collision ) {
@@ -32,7 +35,9 @@ public class Switch : InteractiveBehaviour {
             return;
         }
         message = false;
-        objectToInteract.Interact( this );
+        for ( int i = 0; i < objectsToInteract.Length; i++ ) {
+            objectsToInteract[i].Interact( this );
+        }
     }
 
 }

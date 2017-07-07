@@ -20,4 +20,4 @@ MonoBehaviour:
   gravityValue: {x: 0, y: -9.8, z: 0}
   noGravityValue: {x: 0, y: 9.8, z: 0}
   shiftDuration: 0.1
-  gravityDuration: 10
+  gravityDuration: 15
