@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Piloto
   m_EditorClassIdentifier: 
   events: []
-  label: Piloto
-  _isActive: 1
+  label: Piloto inconsciente
+  _isActive: 0
   initialActive: 0
-  description: Es el piloto de la nave.
-  activeDescription: "El piloto ya tiene la m\xE1scara."
+  description: "Mi amo est\xE1 inconsciente."
+  activeDescription: "M\xE1scara de Ox\xEDgeno colocada."
   itemInteractions:
     item: {fileID: 11400000, guid: f683c091b7edfab4e97cd65aaf8a7c77, type: 2}
     correctText: "Se puso la m\xE1scara al piloto"
@@ -24,7 +24,5 @@ MonoBehaviour:
   requiredObjects:
   - {fileID: 11400000, guid: ccd9a447f8d7452438af3b4ee3cf2bd8, type: 2}
   - {fileID: 11400000}
-  successText: 'Salvaste al piloto.
-
-    Fin del juego.'
+  successText: "\xA1Has salvado al piloto!"
   failedText: "Necesitas salvar al piloto de la nave!\xA1"

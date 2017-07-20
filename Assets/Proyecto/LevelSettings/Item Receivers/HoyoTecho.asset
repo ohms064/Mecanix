@@ -11,11 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cf57f5fd97fa2419391957f56edcd3, type: 3}
   m_Name: HoyoTecho
   m_EditorClassIdentifier: 
+  events: []
   label: Hoyo
-  isActive: 0
+  _isActive: 0
   initialActive: 0
-  description: Agujero por donde se fuga el aire de la nave.
-  activeDescription: "\xA1Se arregl\xF3 el hoyo en la nave!"
+  description: "La ventana est\xE1 rota."
+  activeDescription: "Se repar\xF3 la ventana.\nNivel de ox\xEDgeno estable."
   itemInteractions:
     item: {fileID: 11400000, guid: 0c3404f24965b454c81f5ba150524f6e, type: 2}
     correctText: "Se arregl\xF3 el techo de la pared. \xA1El ox\xEDgeno dej\xF3 de

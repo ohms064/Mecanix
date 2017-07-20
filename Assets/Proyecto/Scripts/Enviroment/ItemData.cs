@@ -12,6 +12,7 @@ public class ItemData : InteractiveBehaviour {
         }
         else {
             interactor.Grab( this );
+            DebugUI.instance.Log( data.description );
         }
     }
 

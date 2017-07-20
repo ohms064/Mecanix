@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacb53b7483e3274798cd87004cdb826, type: 3}
   m_Name: Caja
   m_EditorClassIdentifier: 
+  events: []
   label: Caja
   _isActive: 0
   initialActive: 0
-  description: Una caja con considerable peso
+  description: Una caja...
   activeDescription: 

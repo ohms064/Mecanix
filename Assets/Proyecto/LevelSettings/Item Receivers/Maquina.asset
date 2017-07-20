@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: Maquina
   m_EditorClassIdentifier: 
   events: []
-  label: PanelDeControl
-  _isActive: 1
+  label: Panel de Control
+  _isActive: 0
   initialActive: 0
   description: Panel de Control principal
-  activeDescription: "Se reactiv\xF3 el Panel de Control"
+  activeDescription: "Se activ\xF3 el Panel de Control"
   itemInteractions:
     item: {fileID: 11400000, guid: dee1f7537852e504ca6a881c7f148f9a, type: 2}
     correctText: "Se reactiv\xF3 el panel de control"
-  failedInteraction: "\xC9sto no funciona. Parece faltarle una pieza"
+  failedInteraction: Le hace falta una pieza...

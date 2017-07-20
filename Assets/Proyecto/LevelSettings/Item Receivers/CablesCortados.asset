@@ -20,5 +20,5 @@ MonoBehaviour:
   activeDescription: "Los cables ya est\xE1n conectados."
   itemInteractions:
     item: {fileID: 11400000, guid: cff403f8b1c98164d9acc9d526dafc55, type: 2}
-    correctText: Pegaste los cables con la cinta de aislar.
+    correctText: Se pegaron los cables con la cinta.
   failedInteraction: "No puedes arreglar los cables con \xE9sto."

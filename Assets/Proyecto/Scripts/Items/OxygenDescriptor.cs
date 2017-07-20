@@ -14,10 +14,10 @@ public class OxygenDescriptor : Descriptor {
     public event OxygenStatusChange OxygenOk;
     public event OxygenStatusChange OxygenDeath;
     public OxygenStatus status;
-    public float nivelOxigeno;
+    public float nivelOxigeno, maxOxigeno;
     [TextArea(5,10)] public string deathMessage;
     
-    [SerializeField] private float warningOxigeno, dangerOxigeno, maxOxigeno;
+    [SerializeField] private float warningOxigeno, dangerOxigeno;
 
     public void Begin() {
         nivelOxigeno = maxOxigeno;

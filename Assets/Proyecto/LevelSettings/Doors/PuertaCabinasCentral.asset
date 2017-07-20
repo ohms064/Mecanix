@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events: []
   label: CabinasCentral
-  _isActive: 1
+  _isActive: 0
   initialActive: 0
   description: 
   activeDescription: 

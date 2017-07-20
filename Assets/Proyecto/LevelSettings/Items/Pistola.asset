@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacb53b7483e3274798cd87004cdb826, type: 3}
   m_Name: Pistola
   m_EditorClassIdentifier: 
-  label: Pistola
-  isActive: 0
+  events: []
+  label: Spray Resanador
+  _isActive: 0
   initialActive: 0
-  description: Pistola que sirve para soldar o reparar objetos.
+  description: Una lata de spray...
+  activeDescription: 

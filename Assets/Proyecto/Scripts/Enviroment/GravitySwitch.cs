@@ -23,6 +23,7 @@ public class GravitySwitch : InteractiveBehaviour {
         if (on) {
             return;
         }
+        DebugUI.instance.Log( descriptor.activeDescription );
         descriptor.Set( on, this );
     }
 

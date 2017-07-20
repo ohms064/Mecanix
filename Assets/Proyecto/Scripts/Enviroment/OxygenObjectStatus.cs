@@ -7,6 +7,16 @@ public class OxygenObjectStatus : InteractiveBehaviour {
     private OxygenManager manager;
     private Material material;
     public Color normal, warning, danger;
+    public ProgressBar bar;
+    private float maxOxigeno;
+
+    private void Awake() {
+        bar.gameObject.SetActive( false );
+    }
+
+    private void Update() {
+        bar.SetPercentage( manager.descriptor.nivelOxigeno * maxOxigeno );        
+    }
 
     public override void Interact( PlayerInteractor interactor ) {
         Debug.Log( manager.descriptor.description );
@@ -29,12 +39,14 @@ public class OxygenObjectStatus : InteractiveBehaviour {
     }
 
     private void OnEnable() {
+        bar.gameObject.SetActive( true);
         manager = OxygenManager.instance;
         material = GetComponent<Renderer>().material;
         manager.descriptor.OxygenDanger += OnOxygenDanger;
         manager.descriptor.OxygenOk += OnOxygenNormal;
         manager.descriptor.OxygenWarning += OnOxygenWarning;
-        
+        maxOxigeno = 1 / manager.descriptor.maxOxigeno;
+
     }
 
     private void OnDisable() {

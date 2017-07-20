@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d1eec69ef28038248a2d80e6407a3389
+timeCreated: 1500575498
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Prestige Elite Std
+  fontNames:
+  - Prestige Elite Std
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,8 +15,8 @@ MonoBehaviour:
   label: "Bot\xF3n"
   _isActive: 0
   initialActive: 0
-  description: "Bot\xF3n que controla la energ\xEDa"
-  activeDescription: Ya hay electricidad!
+  description: "Un bot\xF3n..."
+  activeDescription: "\xA1Ya hay electricidad!"
   requiredObjects:
   - {fileID: 11400000, guid: b11242f854877e541bfdb11710786731, type: 2}
   - {fileID: 11400000, guid: 63fec9b2b37783e4780cf005d055613d, type: 2}

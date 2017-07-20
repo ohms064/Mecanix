@@ -10,6 +10,9 @@ public class AudioEvent : EventBehaviour {
 
     private void Start() {
         source = GetComponent<AudioSource>();
+        source.clip = onStart.clip;
+        source.loop = onStart.loop;
+        source.Play();
     }
 
     public override void OnActivate(Descriptor desc) {
@@ -19,11 +22,7 @@ public class AudioEvent : EventBehaviour {
         StartEvent();
     }
     public override void OnStart() {
-        if ( onStart.clip != null ) {
-            source.clip = onStart.clip;
-            source.loop = onStart.loop;
-            source.Play();
-        }
+
     }
 
     public override void OnDeactivate(Descriptor desc) {
