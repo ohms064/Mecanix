@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacb53b7483e3274798cd87004cdb826, type: 3}
   m_Name: Cinta de Aislar
   m_EditorClassIdentifier: 
+  events: []
   label: Cinta
   _isActive: 0
   initialActive: 0
-  description: Cinsta para pegar cables
+  description: Cinta para pegar cables
   activeDescription: 
