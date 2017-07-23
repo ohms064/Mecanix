@@ -8,9 +8,15 @@ public class ItemData : InteractiveBehaviour {
 
     public override void Interact( PlayerInteractor interactor ) {
         if ( interactor.secondInteraction ) {
+            for ( int i = 0; i < events.Length; i++ ) {
+                events[i].EndEvent();
+            }
             interactor.Drop();
         }
         else {
+            for ( int i = 0; i < events.Length; i++ ) {
+                events[i].StartEvent();
+            }
             interactor.Grab( this );
             DebugUI.instance.Log( data.description );
         }

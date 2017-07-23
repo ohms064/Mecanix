@@ -15,7 +15,8 @@ public class ItemReceiver : InteractiveBehaviour {
 
     public override void Interact( PlayerInteractor interactor ) {
         if ( interactor.grabbedObjectData == null ) {
-            DebugUI.instance.Log( data.IsActive ? data.activeDescription : data.description );
+            if ( DebugUI.instance != null )
+                DebugUI.instance.Log( data.IsActive ? data.activeDescription : data.description );
             return;
         }
         if ( interactor.grabbedObjectData.data.Equals( data.itemInteractions.item )) {
@@ -23,13 +24,15 @@ public class ItemReceiver : InteractiveBehaviour {
             Transform droppedObject = interactor.Drop();
             droppedObject.gameObject.SetActive( false );
             data.IsActive = true;
-            DebugUI.instance.Log( data.itemInteractions.correctText );
+            if(DebugUI.instance != null)
+                DebugUI.instance.Log( data.itemInteractions.correctText );
             for ( int i = 0; i < effect.Length; i++ ) {
                 effect[i].Interact( this );
             }
         }
         else if(!data.IsActive){
-            DebugUI.instance.Log( data.failedInteraction );
+            if ( DebugUI.instance != null )
+                DebugUI.instance.Log( data.failedInteraction );
         }
 
     }

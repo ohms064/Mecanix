@@ -13,8 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events: []
   label: CabinasCentral
-  _isActive: 0
+  _isActive: 1
   initialActive: 0
   description: 
-  activeDescription: 
+  activeDescription: "\xA1Se abri\xF3 la puerta!"
   doorDelay: 0.5
+  required:
+  - {fileID: 11400000, guid: b11242f854877e541bfdb11710786731, type: 2}
+  - {fileID: 11400000, guid: 63fec9b2b37783e4780cf005d055613d, type: 2}

@@ -12,6 +12,7 @@ public class Door : InteractiveBehaviour {
     public bool isOpen = false;
     protected Vector3 origin;
     [SerializeField] protected Vector3 destiny;
+    public float messageDelay;
 
     public override void Start() {
         base.Start();
@@ -26,12 +27,22 @@ public class Door : InteractiveBehaviour {
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
-        if ( interactor.message )
+        if ( interactor.message && data.CanActivate() ) {
             data.IsActive = true;
-        else if(data.IsActive){
+            for ( int i = 0; i < events.Length; i++ ) {
+                events[i].OnActivate(data);
+            }
+            StartCoroutine( OnActive() );
+        }
+        else if ( data.IsActive ) {
             isAnimating = true;
             StartCoroutine( data.DoorDelay() );
         }
+    }
+
+    IEnumerator OnActive() {
+        yield return new WaitForSeconds(messageDelay);
+        DebugUI.instance.Log( data.activeDescription );
     }
 
     protected virtual IEnumerator Open() {
@@ -101,6 +112,6 @@ public class Door : InteractiveBehaviour {
     }
 
     public override void Restart() {
-        throw new NotImplementedException();
+        
     }
 }

@@ -6,7 +6,8 @@ public class WeightedItemData : ItemData {
 
     Rigidbody rb;
 
-    private void Start() {
+    public override void Start() {
+        base.Start();
         rb = GetComponent<Rigidbody>();
     }
 

@@ -22,7 +22,6 @@ public class PlayerInteractor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         if (
 #if UNITY_EDITOR
             Input.GetMouseButtonDown(0)

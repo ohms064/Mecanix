@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
 
-    private void Awake() {
+    protected virtual void Awake() {
         instance = this;
         for ( int i = 0; i < reset.Length; i++ ) {
             reset[i].Reset();
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
         instance = null;
     }
 
-    public void RestartScene() {        
+    public virtual void RestartScene() {        
         SceneManager.LoadScene( 0 );
     }
 }

@@ -8,6 +8,7 @@ public class DoorDescriptor : Descriptor {
     public event SceneDelegate SceneLoadingFinish;
     public event SceneDelegate StartSceneLoading;
     public float doorDelay;
+    public Descriptor[] required;
 
     public IEnumerator DoorDelay() {
         if ( StartSceneLoading != null ) {
@@ -17,6 +18,15 @@ public class DoorDescriptor : Descriptor {
         if ( SceneLoadingFinish != null ) {
             SceneLoadingFinish();
         }
+    }
+
+    public bool CanActivate() {
+        for ( int i = 0; i < required.Length; i++ ) {
+            if ( !required[i].IsActive ) {
+                return false;
+            }
+        }
+        return true;
     }
 
    
