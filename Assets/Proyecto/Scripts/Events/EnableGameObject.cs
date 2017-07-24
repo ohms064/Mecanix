@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnableGameObject : EventBehaviour {
-    public bool onActiveEnabled = false;
-    public bool onDeactiveEnabled = false;
+    public bool onActiveEnabled = false, onStartEventEnabled = false;
+    public bool onDeactiveEnabled = false, onEndEventEnabled = false;
     public override void EndEvent() {
-        
+        gameObject.SetActive( onEndEventEnabled );
     }
 
     public override void OnActivate( Descriptor desc ) {
@@ -19,8 +19,10 @@ public class EnableGameObject : EventBehaviour {
     }
 
     public override void OnStart() {
+        
     }
 
     public override void StartEvent() {
+        gameObject.SetActive( onStartEventEnabled );
     }
 }

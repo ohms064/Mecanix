@@ -18,7 +18,8 @@ public class ItemData : InteractiveBehaviour {
                 events[i].StartEvent();
             }
             interactor.Grab( this );
-            DebugUI.instance.Log( data.description );
+            if(DebugUI.instance != null)
+                DebugUI.instance.Log( data.description );
         }
     }
 

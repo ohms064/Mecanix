@@ -19,8 +19,27 @@ public class SceneLoaderScriptable : ScriptableObject {
         loader = SceneManager.LoadSceneAsync( sceneId, loadingMode );
         loader.allowSceneActivation = false;
         while ( !loader.isDone ) {
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
             if ( loader.progress >= 0.9f ) {
+                loader.allowSceneActivation = true;
+            }
+        }
+        if ( SceneLoadingFinish != null ) {
+            SceneLoadingFinish();
+        }
+    }
+
+    public IEnumerator LoadAsync(float delay) {
+        float time = 0f;
+        loader = SceneManager.LoadSceneAsync( sceneId, loadingMode );
+        loader.allowSceneActivation = false;
+        while ( !loader.isDone ) {
+            yield return new WaitForFixedUpdate();
+            if ( loader.progress >= 0.9f ) {
+                while ( time < delay ) {
+                    time += Time.fixedDeltaTime;
+                    yield return new WaitForFixedUpdate();
+                }
                 loader.allowSceneActivation = true;
             }
         }

@@ -11,6 +11,9 @@ public class Piloto : ItemReceiver {
         }
         if ( pilot.canActivate() ) {
             DebugUI.instance.Log(pilot.successText);
+            for ( int i = 0; i < events.Length; i++ ) {
+                events[i].StartEvent();
+            }
             return;
         }
         base.Interact( interactor );

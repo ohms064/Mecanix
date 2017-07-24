@@ -22,13 +22,11 @@ public class PlayerInteractor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (
-#if UNITY_EDITOR
-            Input.GetMouseButtonDown(0)
-#else
-            OVRInput.GetDown( button ) 
+        if (Input.GetMouseButtonDown(0)
+#if !UNITY_EDITOR && !UNITY_STANDALONE
+            || OVRInput.GetDown( button ) || Input.anyKeyDown
 #endif
-            ) {        
+            ) {
             TryInteract();
         }        
 	}
