@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
     public OVRCameraRig mainCameraRig;
     public GameObject player;
     
-    
     public ElectricityDescriptor electricity;
     public GravityDescriptor gravity;
     public OxygenDescriptor oxygen;

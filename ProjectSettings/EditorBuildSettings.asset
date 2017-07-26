@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto/Scenes/Menu.unity
     guid: 6db43c89e66d4274caf892f20fe14835
-  - enabled: 0
-    path: Assets/Proyecto/Scenes/nave.unity
-    guid: 3de72dbc04461fe46872ec018b7e10e5
+  - enabled: 1
+    path: Assets/Proyecto/Scenes/nave 1.unity
+    guid: b055dba5730aeaa4b9e8bc94c0e6cfb6
   - enabled: 1
     path: Assets/Proyecto/Scenes/SceneWait.unity
     guid: 899f04c60b3d46240b108ac40870b1d6
   - enabled: 1
-    path: Assets/Proyecto/Scenes/nave 1.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Proyecto/Scenes/video.unity
+    guid: 2c25c333cfb334d409d30f1daf49b760
+  - enabled: 0
+    path: Assets/Proyecto/Scenes/nave.unity
+    guid: 3de72dbc04461fe46872ec018b7e10e5

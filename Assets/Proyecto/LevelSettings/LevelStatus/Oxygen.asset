@@ -19,7 +19,7 @@ MonoBehaviour:
   activeDescription: 
   status: 0
   nivelOxigeno: 287.56143
-  maxOxigeno: 300
+  maxOxigeno: 3000
   deathMessage: "\xA1Se acab\xF3 el ox\xEDgeno!"
-  warningOxigeno: 60
-  dangerOxigeno: 150
+  warningOxigeno: 600
+  dangerOxigeno: 1500
