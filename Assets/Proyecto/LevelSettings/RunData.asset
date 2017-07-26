@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c667e114330a344bd730c6db37a072, type: 3}
   m_Name: RunData
   m_EditorClassIdentifier: 
-  successClicks: 11
+  successClicks: 2
   failedClicks: 0
   firstDoorTime: 26.66
   secondDoorTime: 38.54

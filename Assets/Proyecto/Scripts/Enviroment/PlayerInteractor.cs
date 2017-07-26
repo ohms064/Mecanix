@@ -19,7 +19,8 @@ public class PlayerInteractor : MonoBehaviour {
 	void Start () {
         cameraOrigin = GameManager.instance.mainCameraRig.rightEyeCamera;
         layerMask = LayerMask.GetMask( "Item", "Interactive" );
-        analytics.successClicks = analytics.failedClicks = 0;
+        if(analytics != null)
+            analytics.successClicks = analytics.failedClicks = 0;
     }
 	
 	// Update is called once per frame
@@ -37,7 +38,8 @@ public class PlayerInteractor : MonoBehaviour {
         Transform origin = cameraOrigin.transform;
         RaycastHit hit;
         if ( Physics.Raycast( origin.position, origin.forward.normalized, out hit, grabDistance, layerMask ) ) {
-            analytics.successClicks++;
+            if ( analytics != null )
+                analytics.successClicks++;
             var inter = hit.transform.GetComponent<InteractiveBehaviour>();
             if ( inter != null ) {
                 if ( inter.Equals( grabbedObjectData ) ) {
@@ -55,7 +57,7 @@ public class PlayerInteractor : MonoBehaviour {
             grabbedObjectData.Interact( this );
             secondInteraction = false;
         }
-        else {
+        else if ( analytics != null ) {
             analytics.failedClicks++;
         }
     }
