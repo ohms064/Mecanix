@@ -16,7 +16,7 @@ MonoBehaviour:
   _isActive: 1
   initialActive: 0
   description: 
-  activeDescription: "\xA1Se abri\xF3 la puerta!"
+  activeDescription: "\xA1Se abrieron las puertas!"
   doorDelay: 0.5
   required:
   - {fileID: 11400000, guid: b11242f854877e541bfdb11710786731, type: 2}

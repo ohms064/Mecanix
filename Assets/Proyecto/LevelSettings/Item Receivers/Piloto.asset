@@ -15,7 +15,7 @@ MonoBehaviour:
   label: Piloto inconsciente
   _isActive: 0
   initialActive: 0
-  description: "Mi amo est\xE1 inconsciente."
+  description: "El operador est\xE1 inconsciente."
   activeDescription: "M\xE1scara de Ox\xEDgeno colocada."
   itemInteractions:
     item: {fileID: 11400000, guid: f683c091b7edfab4e97cd65aaf8a7c77, type: 2}

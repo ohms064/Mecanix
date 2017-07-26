@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum SceneLoad {
-    MENU, GAME, WAIT, SELECTOR
+    MENU, GAME, WAIT, SELECTOR, NONE
 }
 
 public class SceneEvent : EventBehaviour {
@@ -45,8 +45,6 @@ public class SceneEvent : EventBehaviour {
                 break;
             case SceneLoad.SELECTOR:
                 manager.StartSelectorScreen();
-                break;
-            default:
                 break;
         }
     }

@@ -15,7 +15,7 @@ public class VideoEvents : MonoBehaviour {
     }
 
     public void OnEnd( VideoPlayer vi ) {
-        //ev.ChangeScene(ev.scene2LoadOnStartEvent);
+        StartCoroutine( ev.SelectScene( ev.onStartEventScene ) );
     }
 
 }
