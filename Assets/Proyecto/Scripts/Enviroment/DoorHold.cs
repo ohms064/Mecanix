@@ -10,19 +10,24 @@ public class DoorHold : Door {
         origin = this.transform.position;
         animInverse = animationDuration;
         destiny += origin;
+        firstOpen = false;
     }
 
     public override void Interact( PlayerInteractor interactor ) {
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
+        if ( !firstOpen ) {
+            firstOpen = true;
+            analytics.AddDoor( data, Time.timeSinceLevelLoad );
+        }
         if ( interactor.message ){
 
                 if ( !isOpen ) {
                     StopCoroutine( Close() );
                 }
                 StartCoroutine( Open() );
-            
+
         }
         else{
 

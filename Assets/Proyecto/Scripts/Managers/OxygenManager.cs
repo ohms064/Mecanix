@@ -7,6 +7,7 @@ public class OxygenManager : MonoBehaviour {
     public OxygenDescriptor descriptor;
     private bool isActive = false;
     public DoorDescriptor doorTrigger;
+    public AnalyticsManager analytics;
 
     private void Awake() {
         instance = this;
@@ -31,6 +32,7 @@ public class OxygenManager : MonoBehaviour {
     public void Fix() {
         isActive = false;
         DebugUI.instance.Log( "El oxígeno dejó de fugarse" );
+        analytics.oxygenPuzzleTime = Time.timeSinceLevelLoad - analytics.firstDoorTime;
     }
 
 }

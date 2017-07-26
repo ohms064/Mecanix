@@ -13,11 +13,13 @@ public class PlayerInteractor : MonoBehaviour {
     [HideInInspector] public bool secondInteraction;
     public OVRInput.Button button = OVRInput.Button.One;
     [SerializeField] EventBehaviour[] events;
+    public AnalyticsManager analytics;
 
 	// Use this for initialization
 	void Start () {
         cameraOrigin = GameManager.instance.mainCameraRig.rightEyeCamera;
         layerMask = LayerMask.GetMask( "Item", "Interactive" );
+        analytics.successClicks = analytics.failedClicks = 0;
     }
 	
 	// Update is called once per frame
@@ -35,6 +37,7 @@ public class PlayerInteractor : MonoBehaviour {
         Transform origin = cameraOrigin.transform;
         RaycastHit hit;
         if ( Physics.Raycast( origin.position, origin.forward.normalized, out hit, grabDistance, layerMask ) ) {
+            analytics.successClicks++;
             var inter = hit.transform.GetComponent<InteractiveBehaviour>();
             if ( inter != null ) {
                 if ( inter.Equals( grabbedObjectData ) ) {
@@ -47,10 +50,13 @@ public class PlayerInteractor : MonoBehaviour {
                 }
             }
         }
-        else if(grabbedObject != null){
+        else if ( grabbedObject != null ) {
             secondInteraction = true;
             grabbedObjectData.Interact( this );
             secondInteraction = false;
+        }
+        else {
+            analytics.failedClicks++;
         }
     }
 

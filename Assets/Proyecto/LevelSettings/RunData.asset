@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c667e114330a344bd730c6db37a072, type: 3}
+  m_Name: RunData
+  m_EditorClassIdentifier: 
+  successClicks: 11
+  failedClicks: 0
+  firstDoorTime: 26.66
+  secondDoorTime: 38.54
+  thirdDoorTime: 0
+  totalTime: 90.48746
+  firstDoor: {fileID: 11400000, guid: eb4296cc068a21f46803b8a6fcd9f493, type: 2}
+  secondDoor: {fileID: 11400000, guid: 64d08348357259d458926de45985d5c1, type: 2}
+  thirdDoor: {fileID: 11400000, guid: 5bbb855b27a270d44818ffa9991004dc, type: 2}
+  oxygenPuzzleTime: 0

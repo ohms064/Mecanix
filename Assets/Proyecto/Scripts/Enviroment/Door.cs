@@ -13,11 +13,14 @@ public class Door : InteractiveBehaviour {
     protected Vector3 origin;
     [SerializeField] protected Vector3 destiny;
     public float messageDelay;
+    [HideInInspector]public bool firstOpen = false;
+    public AnalyticsManager analytics;
 
     public override void Start() {
         base.Start();
         origin = transform.position;
         destiny += origin;
+        firstOpen = false;
     }
 
     public override void Interact( PlayerInteractor interactor ) {
@@ -36,6 +39,10 @@ public class Door : InteractiveBehaviour {
         }
         else if ( data.IsActive ) {
             isAnimating = true;
+            if ( !firstOpen ) {
+                firstOpen = true;
+                analytics.AddDoor( data, Time.timeSinceLevelLoad );
+            }
             StartCoroutine( data.DoorDelay() );
         }
     }
