@@ -47,7 +47,7 @@ public class EditorMovementController : MonoBehaviour {
 
         ch.Move( vectorMovement );
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE
         transform.Rotate( Vector3.up, Input.GetAxis( "Mouse X" ) * Time.deltaTime * speedRotation, Space.World );
 
         childCamera.Rotate( Vector3.right, -Input.GetAxis( "Mouse Y" ) * Time.deltaTime * speedRotation );

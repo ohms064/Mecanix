@@ -1324,7 +1324,6 @@ MonoBehaviour:
   button: -1
   events: []
   analytics: {fileID: 0}
-  maxDistance: 0
 --- !u!114 &633231997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,7 +1541,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709679517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
