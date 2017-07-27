@@ -11,12 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c667e114330a344bd730c6db37a072, type: 3}
   m_Name: RunData
   m_EditorClassIdentifier: 
-  successClicks: 2
+  successClicks: 0
   failedClicks: 0
-  firstDoorTime: 26.66
-  secondDoorTime: 38.54
+  firstDoorTime: 0
+  secondDoorTime: 0
   thirdDoorTime: 0
-  totalTime: 90.48746
+  totalTime: 0
   firstDoor: {fileID: 11400000, guid: eb4296cc068a21f46803b8a6fcd9f493, type: 2}
   secondDoor: {fileID: 11400000, guid: 64d08348357259d458926de45985d5c1, type: 2}
   thirdDoor: {fileID: 11400000, guid: 5bbb855b27a270d44818ffa9991004dc, type: 2}

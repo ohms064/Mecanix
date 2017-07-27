@@ -15,6 +15,12 @@ public class AnalyticsManager : ScriptableObject {
         }
     }
 
+    public void Reset() {
+        oxygenPuzzleTime = totalTime = secondDoorTime = thirdDoorTime = firstDoorTime = 0;
+        successClicks = failedClicks = 0;
+
+    }
+
     public void AddDoor(DoorDescriptor des, float time) {
         if ( des == firstDoor ) {
             firstDoorTime = time;

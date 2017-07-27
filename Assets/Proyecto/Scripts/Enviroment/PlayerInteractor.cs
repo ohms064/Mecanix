@@ -19,8 +19,8 @@ public class PlayerInteractor : MonoBehaviour {
 	void Start () {
         cameraOrigin = GameManager.instance.mainCameraRig.rightEyeCamera;
         layerMask = LayerMask.GetMask( "Item", "Interactive" );
-        if(analytics != null)
-            analytics.successClicks = analytics.failedClicks = 0;
+        if ( analytics != null )
+            analytics.Reset();
     }
 	
 	// Update is called once per frame
@@ -69,6 +69,9 @@ public class PlayerInteractor : MonoBehaviour {
         grabbedObjectData = null;
         for ( int i = 0; i < events.Length; i++ ) {
             events[i].EndEvent();
+        }
+        if ( DebugUI.instance != null ) {
+            DebugUI.instance.Log( "" );
         }
         return droppedObject;
     }

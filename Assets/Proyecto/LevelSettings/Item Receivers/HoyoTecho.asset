@@ -15,7 +15,7 @@ MonoBehaviour:
   label: Hoyo
   _isActive: 0
   initialActive: 0
-  description: "La ventana est\xE1 rota."
+  description: "Se est\xE1 escapando el ox\xEDgeno."
   activeDescription: "Se repar\xF3 la ventana.\nNivel de ox\xEDgeno estable."
   itemInteractions:
     item: {fileID: 11400000, guid: 0c3404f24965b454c81f5ba150524f6e, type: 2}

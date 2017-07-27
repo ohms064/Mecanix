@@ -15,5 +15,5 @@ MonoBehaviour:
   label: Caja
   _isActive: 0
   initialActive: 0
-  description: Una caja...
+  description: Una caja pesada.
   activeDescription: 

@@ -15,5 +15,5 @@ MonoBehaviour:
   label: Spray Resanador
   _isActive: 1
   initialActive: 0
-  description: Una lata de spray...
+  description: Lata de Spray Sellador
   activeDescription: 

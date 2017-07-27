@@ -69,4 +69,18 @@ public class SceneLoaderScriptable : ScriptableObject {
     public void QuitApplication() {
         Application.Quit();
     }
+
+    public void SelectScene( SceneLoad sceneToLoad ) {        
+        switch ( sceneToLoad ) {
+            case SceneLoad.MENU:
+                StartMainMenu();
+                break;
+            case SceneLoad.WAIT:
+                StartLoadingScreen();
+                break;
+            case SceneLoad.SELECTOR:
+                StartSelectorScreen();
+                break;
+        }
+    }
 }

@@ -11,10 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc666e6ba5aa0c44934f8a9971795e2, type: 3}
   m_Name: BotonCompuerta
   m_EditorClassIdentifier: 
+  events: []
   label: "Bot\xF3n Compuerta"
-  isActive: 0
+  _isActive: 0
   initialActive: 0
-  description: 
+  description: Parece requerir algo pesado para activarse.
+  activeDescription: 
   requiredObjects: []
   successText: "\xA1Se abri\xF3 la compuerta al exterior!"
   failedText: 

@@ -1324,6 +1324,7 @@ MonoBehaviour:
   button: -1
   events: []
   analytics: {fileID: 0}
+  maxDistance: 0
 --- !u!114 &633231997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,15 +1400,15 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 633231994}
-  m_LocalRotation: {x: -0, y: -0.13208151, z: -0, w: -0.9912389}
-  m_LocalPosition: {x: -12.032426, y: 8.88, z: -0.036573105}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -12.003429, y: 8.88, z: -0.0033929981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1925328720}
   - {fileID: 709679518}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 375.18, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &667310146
 GameObject:
   m_ObjectHideFlags: 0
@@ -3103,6 +3104,7 @@ GameObject:
   - component: {fileID: 1706372095}
   - component: {fileID: 1706372094}
   - component: {fileID: 1706372096}
+  - component: {fileID: 1706372097}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -3155,6 +3157,20 @@ MonoBehaviour:
   gravity: {fileID: 0}
   oxygen: {fileID: 0}
   reset: []
+--- !u!114 &1706372097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706372093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a5a12608a78f040abb23906f0f4fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedTime: 3
+  sceneToLoad: 0
+  manager: {fileID: 11400000, guid: e7c8b2c5877aeae48b321e279efb90f9, type: 2}
 --- !u!1 &1711388797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,7 +4061,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Coloca la esfera en el t\xEDtulo."
+  m_Text: "Coloca la esfera azul en el t\xEDtulo."
 --- !u!222 &2015198475
 CanvasRenderer:
   m_ObjectHideFlags: 0

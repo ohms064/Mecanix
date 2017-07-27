@@ -53,6 +53,9 @@ public class Door : InteractiveBehaviour {
     }
 
     protected virtual IEnumerator Open() {
+        if ( isOpen ) {
+            yield break;
+        }
         float t = 0;
         float beginTime = Time.timeSinceLevelLoad;
         for ( int i = 0; i < events.Length; i++ ) {
@@ -72,6 +75,9 @@ public class Door : InteractiveBehaviour {
     }
 
     protected virtual IEnumerator Close() {
+        if ( !isOpen ) {
+            yield break;
+        }
         float t = 0;
         float beginTime = Time.timeSinceLevelLoad;
         isAnimating = true;
@@ -108,7 +114,7 @@ public class Door : InteractiveBehaviour {
         for ( int i = 0; i < events.Length; i++ ) {
             events[i].StartEvent();
         }
-        StartCoroutine( "Open" );
+        StartCoroutine( Open() );
     }
 
     public void OnSceneLoadStart() {

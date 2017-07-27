@@ -8,7 +8,7 @@ public class Switch : InteractiveBehaviour {
     [SerializeField] InteractiveBehaviour[] objectsToInteract;
 
     public override void Interact( PlayerInteractor interactor ) {
-        
+        DebugUI.instance.Log( data.description );
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {

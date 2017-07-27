@@ -47,15 +47,17 @@ public class EditorMovementController : MonoBehaviour {
 
         ch.Move( vectorMovement );
 
+#if UNITY_EDITOR
         transform.Rotate( Vector3.up, Input.GetAxis( "Mouse X" ) * Time.deltaTime * speedRotation, Space.World );
 
         childCamera.Rotate( Vector3.right, -Input.GetAxis( "Mouse Y" ) * Time.deltaTime * speedRotation );
+
 
         angleX = childCamera.localEulerAngles.x;
         angleX = (angleX > 180.0f) ? angleX - 360 : angleX;
         angleX = Mathf.Clamp( angleX, -45.0f, 45.0f );
         childCamera.localEulerAngles = new Vector3( angleX, childCamera.localEulerAngles.y, childCamera.localEulerAngles.z );
-
+#endif
     }
 
 }

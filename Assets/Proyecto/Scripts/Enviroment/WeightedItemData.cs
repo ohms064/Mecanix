@@ -15,11 +15,22 @@ public class WeightedItemData : ItemData {
         base.Interact( interactor );
         if ( interactor.secondInteraction ) {
             rb.useGravity = true;
-            rb.isKinematic = false;
+            //rb.isKinematic = false;
         }
         else {
             rb.useGravity = false;
-            rb.isKinematic = true;
+            //rb.isKinematic = true;
+            
         }
+    }
+
+
+    private void OnCollisionEnter( Collision collision ) {
+        if ( rb.useGravity || collision.gameObject.layer == LayerMask.NameToLayer("Player") ){
+            return;
+        }
+        PlayerInteractor player = GameManager.instance.player.GetComponent<PlayerInteractor>();
+        rb.useGravity = true;
+        player.Drop();
     }
 }
