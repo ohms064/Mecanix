@@ -16,3 +16,4 @@ MonoBehaviour:
   sceneSelector: 3
   sceneMenu: 0
   loadingMode: 0
+  OnDemoVideo: 0

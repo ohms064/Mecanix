@@ -7,6 +7,12 @@ public class VideoEvents : MonoBehaviour {
     public VideoPlayer player;
     public SceneEvent ev;
 
+    private void Start() {
+        if ( ev.manager.OnDemoVideo ) {
+            ev.onStartEventScene = SceneLoad.MENU;
+        }
+    }
+
     private void OnEnable() {
         player.loopPointReached += OnEnd;
     }
