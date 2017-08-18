@@ -15,11 +15,11 @@ public class WeightedItemData : ItemData {
         base.Interact( interactor );
         if ( interactor.secondInteraction ) {
             rb.useGravity = true;
-            //rb.isKinematic = false;
+            rb.isKinematic = false;
         }
         else {
             rb.useGravity = false;
-            //rb.isKinematic = true;
+            rb.isKinematic = true;
             
         }
     }

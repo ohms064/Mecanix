@@ -17,9 +17,9 @@ MonoBehaviour:
   initialActive: 0
   description: "\xA1El ox\xEDgenos empez\xF3 a drenarse!"
   activeDescription: 
-  status: 0
-  nivelOxigeno: 287.56143
-  maxOxigeno: 3000
+  status: 3
+  nivelOxigeno: -0.00025328808
+  maxOxigeno: 720
   deathMessage: "\xA1Se acab\xF3 el ox\xEDgeno!"
-  warningOxigeno: 600
-  dangerOxigeno: 1500
+  warningOxigeno: 360
+  dangerOxigeno: 180

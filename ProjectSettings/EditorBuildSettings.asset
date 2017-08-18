@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Proyecto/Scenes/nave.unity
     guid: 3de72dbc04461fe46872ec018b7e10e5
+  - enabled: 1
+    path: Assets/Proyecto/Scenes/nave FINAL.unity
+    guid: 00000000000000000000000000000000

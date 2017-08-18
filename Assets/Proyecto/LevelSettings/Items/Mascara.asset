@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacb53b7483e3274798cd87004cdb826, type: 3}
   m_Name: Mascara
   m_EditorClassIdentifier: 
+  events: []
   label: "M\xE1scara de Ox\xEDgeno"
-  isActive: 0
+  _isActive: 0
   initialActive: 0
   description: "M\xE1scara que permite al usuario respirar normalmente."
+  activeDescription: Hay que reparar antes la fuga.
