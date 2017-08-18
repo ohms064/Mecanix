@@ -19,7 +19,6 @@ public class DoorHold : Door {
     public override void Interact( InteractiveBehaviour interactor ) {
         if ( !firstOpen ) {
             firstOpen = true;
-            analytics.AddDoor( data, Time.timeSinceLevelLoad );
         }
         if ( interactor.message ){
 

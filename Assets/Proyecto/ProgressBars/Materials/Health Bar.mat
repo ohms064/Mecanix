@@ -73,7 +73,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ProgressionVal: 1
+    - _ProgressionVal: 0.96310484
     - _SrcBlend: 1
     - _Stencil: 0
     - _StencilComp: 8
@@ -85,5 +85,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color2: {r: 0.32953072, g: 0.8455882, b: 0.3330897, a: 0}
+    - _Color2: {r: 0.3542606, g: 0.8143992, b: 0.32080388, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

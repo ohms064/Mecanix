@@ -12,7 +12,9 @@ public class DoorTrigger : InteractiveBehaviour {
     }
 
     public override void Interact( InteractiveBehaviour interactor ) {
-        
+        if ( isInside ) {
+            TryOpen();
+        }
     }
 
     public override void Restart() {
@@ -21,15 +23,19 @@ public class DoorTrigger : InteractiveBehaviour {
 
     private void OnTriggerEnter( Collider other ) {
         isInside = true;
-        for (int i = 0; i < door.Length; i++) {
-            if (door[i].isOpen) {
+        TryOpen();
+        
+    }
+
+    private void TryOpen() {
+        for ( int i = 0; i < door.Length; i++ ) {
+            if ( door[i].isOpen ) {
                 return;
             }
         }
-        for(int i = 0; i < door.Length; i++) {
-            door[i].Interact(this);
+        for ( int i = 0; i < door.Length; i++ ) {
+            door[i].Interact( this );
         }
-        
     }
 
     private void OnTriggerExit( Collider other ) {

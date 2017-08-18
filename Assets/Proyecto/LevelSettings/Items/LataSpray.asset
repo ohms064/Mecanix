@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: LataSpray
   m_EditorClassIdentifier: 
   events: []
-  label: Spray Resanador
-  _isActive: 1
+  label: Kit Soldar
+  _isActive: 0
   initialActive: 0
-  description: Lata de Spray Sellador
+  description: Kit para soldar.
   activeDescription: 
+  grab: 0

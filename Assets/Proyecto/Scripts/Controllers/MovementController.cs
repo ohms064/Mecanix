@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class MovementController : OVRPlayerController {
-
+    
     protected override void UpdateController() {
         if ( useProfileData ) {
             if ( InitialPose == null ) {

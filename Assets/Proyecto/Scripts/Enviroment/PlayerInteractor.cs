@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteractor : MonoBehaviour {
     public float grabDistance = 10f;
-    [SerializeField]Transform grabPosition;
+    [SerializeField]Transform grabPosition, boxGrabPosition;
     Transform grabbedObject;
     public ItemData grabbedObjectData;
     Camera cameraOrigin;
@@ -13,14 +13,11 @@ public class PlayerInteractor : MonoBehaviour {
     [HideInInspector] public bool secondInteraction;
     public OVRInput.Button button = OVRInput.Button.One;
     [SerializeField] EventBehaviour[] events;
-    public AnalyticsManager analytics;
 
 	// Use this for initialization
 	void Start () {
         cameraOrigin = GameManager.instance.mainCameraRig.rightEyeCamera;
         layerMask = LayerMask.GetMask( "Item", "Interactive" );
-        if ( analytics != null )
-            analytics.Reset();
     }
 	
 	// Update is called once per frame
@@ -38,8 +35,6 @@ public class PlayerInteractor : MonoBehaviour {
         Transform origin = cameraOrigin.transform;
         RaycastHit hit;
         if ( Physics.Raycast( origin.position, origin.forward.normalized, out hit, grabDistance, layerMask ) ) {
-            if ( analytics != null )
-                analytics.successClicks++;
             var inter = hit.transform.GetComponent<InteractiveBehaviour>();
             if ( inter != null ) {
                 if ( inter.Equals( grabbedObjectData ) ) {
@@ -56,9 +51,6 @@ public class PlayerInteractor : MonoBehaviour {
             secondInteraction = true;
             grabbedObjectData.Interact( this );
             secondInteraction = false;
-        }
-        else if ( analytics != null ) {
-            analytics.failedClicks++;
         }
     }
 
@@ -82,7 +74,13 @@ public class PlayerInteractor : MonoBehaviour {
         }
         grabbedObject = hit.transform;
         grabbedObjectData = hit;
-        grabbedObject.position = grabPosition.position;
+        if ( hit.data.grab ) {
+            grabbedObject.position = boxGrabPosition.position;
+        }
+        else {
+            grabbedObject.position = grabPosition.position;
+        }
+        
         grabbedObject.parent = grabPosition; //TODO: This must be temporal!
         for ( int i = 0; i < events.Length; i++ ) {
             events[i].OnActivate(hit.data);

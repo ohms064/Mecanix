@@ -17,3 +17,4 @@ MonoBehaviour:
   initialActive: 0
   description: Una caja pesada.
   activeDescription: 
+  grab: 1

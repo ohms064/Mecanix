@@ -11,8 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52f05ddadd65214f87bf703ad9cad4e, type: 3}
   m_Name: CompuertaExterior
   m_EditorClassIdentifier: 
+  events: []
   label: Compuerta
-  isActive: 1
+  _isActive: 1
   initialActive: 0
   description: Hacia el exterior
+  activeDescription: 
   doorDelay: 1
+  required: []
