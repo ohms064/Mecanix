@@ -18081,6 +18081,7 @@ MonoBehaviour:
   speedMovement: 2
   speedRotation: 100
   childCamera: {fileID: 814924169}
+  input: {fileID: 11400000, guid: e83f16717eceb6a48885a3c60d3a7cf9, type: 2}
 --- !u!114 &624365021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18100,6 +18101,7 @@ MonoBehaviour:
   secondInteraction: 0
   button: 1
   events: []
+  input: {fileID: 11400000, guid: e83f16717eceb6a48885a3c60d3a7cf9, type: 2}
 --- !u!114 &624365022
 MonoBehaviour:
   m_ObjectHideFlags: 0

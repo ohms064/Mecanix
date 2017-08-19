@@ -10,6 +10,7 @@ public class EditorMovementController : MonoBehaviour {
     [SerializeField] private Transform childCamera;
     private float angleX, jump;
     private bool isFalling;
+    public InputReceiver input;
 
     // Use this for initialization
     void Start() {
@@ -44,6 +45,15 @@ public class EditorMovementController : MonoBehaviour {
             (childCamera.right * Input.GetAxis( "Horizontal" ) * Time.deltaTime * speedMovement)
             + (childCamera.forward * Input.GetAxis( "Vertical" ) * Time.deltaTime * speedMovement)
             ) * (Input.GetKey( KeyCode.LeftShift ) ? 1.5f : 1.0f);
+#if UNITY_ANDROID 
+        if ( input.moveInteraction ) {
+            vectorMovement += childCamera.forward * Time.deltaTime * speedMovement;
+        }
+        input.movePressed = Input.GetMouseButton( 0 );
+        if ( Input.GetMouseButtonUp( 0 ) ) {
+            input.moveInteraction = false;
+        }
+#endif
 
         ch.Move( vectorMovement );
 

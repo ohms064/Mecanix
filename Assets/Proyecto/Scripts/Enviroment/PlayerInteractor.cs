@@ -13,22 +13,30 @@ public class PlayerInteractor : MonoBehaviour {
     [HideInInspector] public bool secondInteraction;
     public OVRInput.Button button = OVRInput.Button.One;
     [SerializeField] EventBehaviour[] events;
+    public InputReceiver input;
 
 	// Use this for initialization
 	void Start () {
+        input.Reset();
         cameraOrigin = GameManager.instance.mainCameraRig.rightEyeCamera;
         layerMask = LayerMask.GetMask( "Item", "Interactive" );
+        StartCoroutine( input.CheckDoubleClick() );
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0)
+        if (
+#if UNITY_ANDROID
+            input.grabInteraction
+#endif
 #if !UNITY_EDITOR && !UNITY_STANDALONE
             || OVRInput.GetDown( button ) || Input.anyKeyDown
 #endif
             ) {
             TryInteract();
-        }        
+            input.grabInteraction = false;
+        }
+        input.click = Input.GetMouseButtonDown( 0 );
 	}
 
     void TryInteract() {
