@@ -19,7 +19,7 @@ public class EnableGameObject : EventBehaviour {
     }
 
     public override void OnStart() {
-        
+
     }
 
     public override void StartEvent() {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteractor : MonoBehaviour {
     public float grabDistance = 10f;
-    [SerializeField]Transform grabPosition;
+    [SerializeField]Transform grabPosition, boxGrabPosition;
     Transform grabbedObject;
     public ItemData grabbedObjectData;
     Camera cameraOrigin;
@@ -13,33 +13,36 @@ public class PlayerInteractor : MonoBehaviour {
     [HideInInspector] public bool secondInteraction;
     public OVRInput.Button button = OVRInput.Button.One;
     [SerializeField] EventBehaviour[] events;
-    public AnalyticsManager analytics;
+    public InputReceiver input;
 
 	// Use this for initialization
 	void Start () {
+        input.Reset();
         cameraOrigin = GameManager.instance.mainCameraRig.rightEyeCamera;
         layerMask = LayerMask.GetMask( "Item", "Interactive" );
-        if ( analytics != null )
-            analytics.Reset();
+        StartCoroutine( input.CheckDoubleClick() );
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0)
+        if (
+#if UNITY_ANDROID
+            input.grabInteraction
+#endif
 #if !UNITY_EDITOR && !UNITY_STANDALONE
             || OVRInput.GetDown( button ) || Input.anyKeyDown
 #endif
             ) {
             TryInteract();
-        }        
+            input.grabInteraction = false;
+        }
+        input.click = Input.GetMouseButtonDown( 0 );
 	}
 
     void TryInteract() {
         Transform origin = cameraOrigin.transform;
         RaycastHit hit;
         if ( Physics.Raycast( origin.position, origin.forward.normalized, out hit, grabDistance, layerMask ) ) {
-            if ( analytics != null )
-                analytics.successClicks++;
             var inter = hit.transform.GetComponent<InteractiveBehaviour>();
             if ( inter != null ) {
                 if ( inter.Equals( grabbedObjectData ) ) {
@@ -56,9 +59,6 @@ public class PlayerInteractor : MonoBehaviour {
             secondInteraction = true;
             grabbedObjectData.Interact( this );
             secondInteraction = false;
-        }
-        else if ( analytics != null ) {
-            analytics.failedClicks++;
         }
     }
 
@@ -82,7 +82,13 @@ public class PlayerInteractor : MonoBehaviour {
         }
         grabbedObject = hit.transform;
         grabbedObjectData = hit;
-        grabbedObject.position = grabPosition.position;
+        if ( hit.data.grab ) {
+            grabbedObject.position = boxGrabPosition.position;
+        }
+        else {
+            grabbedObject.position = grabPosition.position;
+        }
+        
         grabbedObject.parent = grabPosition; //TODO: This must be temporal!
         for ( int i = 0; i < events.Length; i++ ) {
             events[i].OnActivate(hit.data);

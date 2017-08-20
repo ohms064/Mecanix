@@ -13,6 +13,7 @@ public class SceneLoaderScriptable : ScriptableObject {
     AsyncOperation loader;
     public static event SceneDelegate SceneLoadingFinish;
     public static event SceneDelegate StartSceneLoading;
+    public bool OnDemoVideo = false;
 
     public IEnumerator LoadAsync() {
  

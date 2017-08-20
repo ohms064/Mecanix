@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events: []
   label: 
-  _isActive: 0
+  _isActive: 1
   initialActive: 0
   description: 
   activeDescription: 
+  grab: 0

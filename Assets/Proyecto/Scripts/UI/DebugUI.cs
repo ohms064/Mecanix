@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class DebugUI : MonoBehaviour {
     public static DebugUI instance;
     private int lines = 0;
     public int maxLines = 5;
+    public float waitTime;
+    private bool waitingToHide = false;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +29,20 @@ public class DebugUI : MonoBehaviour {
         }
         Debug.Log( text );
         */
+        if ( waitingToHide ) {
+            StopAllCoroutines();
+            waitingToHide = false;
+        }
+
         debug.text = string.Format("{0}\n", text);
         Debug.Log(text);
+
+        StartCoroutine( Hide() );
+    }
+
+    IEnumerator Hide() {
+        waitingToHide = true;
+        yield return new WaitForSeconds( waitTime );
+        debug.text = "";
     }
 }

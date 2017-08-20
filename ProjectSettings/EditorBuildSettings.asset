@@ -21,5 +21,10 @@ EditorBuildSettings:
     path: Assets/Proyecto/Scenes/nave.unity
     guid: 3de72dbc04461fe46872ec018b7e10e5
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Proyecto/Scenes/naveParticulas.unity
     guid: 355d03a792f55b74d90868d4ba1eca79
+=======
+    path: Assets/Proyecto/Scenes/nave FINAL.unity
+    guid: ca0c3db260a0b404cb8e6bad2396f0f5
+>>>>>>> a873f4e91c31abde225a088f2ae23b17e9f8bdfb

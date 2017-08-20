@@ -8,7 +8,7 @@ public enum SceneLoad {
 }
 
 public class SceneEvent : EventBehaviour {
-    [SerializeField] SceneLoaderScriptable manager;
+    public SceneLoaderScriptable manager;
     public float delay;
     public SceneLoad onActivateScene, onStartEventScene;
     public override void EndEvent() {

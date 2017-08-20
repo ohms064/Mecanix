@@ -14,7 +14,6 @@ public class Door : InteractiveBehaviour {
     [SerializeField] protected Vector3 destiny;
     public float messageDelay;
     [HideInInspector]public bool firstOpen = false;
-    public AnalyticsManager analytics;
 
     public override void Start() {
         base.Start();
@@ -41,7 +40,6 @@ public class Door : InteractiveBehaviour {
             isAnimating = true;
             if ( !firstOpen ) {
                 firstOpen = true;
-                analytics.AddDoor( data, Time.timeSinceLevelLoad );
             }
             StartCoroutine( data.DoorDelay() );
         }
