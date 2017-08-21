@@ -290,6 +290,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &495587201 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 459718, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+  m_PrefabInternal: {fileID: 8700262}
 --- !u!1 &660087921
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +414,7 @@ GameObject:
   - component: {fileID: 1039958530}
   - component: {fileID: 1039958529}
   - component: {fileID: 1039958532}
+  - component: {fileID: 1039958533}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -472,6 +477,23 @@ MonoBehaviour:
   pressedTime: 3
   sceneToLoad: 2
   manager: {fileID: 11400000, guid: e7c8b2c5877aeae48b321e279efb90f9, type: 2}
+--- !u!114 &1039958533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1039958528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eb3fa17ee47b54eb8e4c4db22a4012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCameraRig: {fileID: 1929232060}
+  player: {fileID: 1929232055}
+  electricity: {fileID: 0}
+  gravity: {fileID: 0}
+  oxygen: {fileID: 0}
+  reset: []
 --- !u!1 &1148112773
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +782,7 @@ GameObject:
   - component: {fileID: 1670366544}
   - component: {fileID: 1670366543}
   - component: {fileID: 1670366545}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Extras-02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,6 +1001,47 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1860695422}
+--- !u!1 &1929232055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+  m_PrefabInternal: {fileID: 8700262}
+--- !u!114 &1929232056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929232055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f1a22ddc0eec34597d7127bb349af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabDistance: 500
+  grabPosition: {fileID: 495587201}
+  boxGrabPosition: {fileID: 495587201}
+  grabbedObjectData: {fileID: 0}
+  secondInteraction: 0
+  button: -1
+  events: []
+  input: {fileID: 11400000, guid: e83f16717eceb6a48885a3c60d3a7cf9, type: 2}
+--- !u!114 &1929232057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929232055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f2ac5ee8b920742915b691f0288458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cursorIsLocked: 0
+--- !u!114 &1929232060 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400010, guid: 126d619cf4daa52469682f85c1378b4a,
+    type: 2}
+  m_PrefabInternal: {fileID: 8700262}
+  m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
 --- !u!1 &2131643607
 GameObject:
   m_ObjectHideFlags: 0

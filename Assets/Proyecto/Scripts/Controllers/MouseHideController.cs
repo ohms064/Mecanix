@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class MouseHideController : MonoBehaviour {
 #if !UNITY_ANDROID || UNITY_EDITOR
-    private bool m_cursorIsLocked;
+    public bool m_cursorIsLocked = true;
 
     private void InternalLockUpdate() {
 #if UNITY_EDITOR
         if ( Input.GetKeyUp( KeyCode.Escape ) ) {
             m_cursorIsLocked = false;
         }
-        else
-#endif
-        if ( Input.GetMouseButtonUp( 0 ) ) {
+        else if( Input.GetMouseButtonUp( 0 ) ) {
             m_cursorIsLocked = true;
         }
+#endif
 
         if ( m_cursorIsLocked ) {
             Cursor.lockState = CursorLockMode.Locked;
@@ -31,8 +30,5 @@ public class MouseHideController : MonoBehaviour {
         InternalLockUpdate();
     }
 
-    private void Start() {
-        m_cursorIsLocked = true;
-    }
 #endif
 }

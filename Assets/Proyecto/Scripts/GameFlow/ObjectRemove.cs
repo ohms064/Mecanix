@@ -17,7 +17,7 @@ public class ObjectRemove : MonoBehaviour {
                 break;
             case ObjectType.PC:
 #if UNITY_ANDROID
-                Destroy(gameobject);
+                Destroy(gameObject);
 #endif
                 break;
             default:
