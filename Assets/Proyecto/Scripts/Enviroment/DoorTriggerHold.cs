@@ -11,11 +11,5 @@ public class DoorTriggerHold : DoorTrigger {
         }
     }
 
-    private void OnTriggerExit( Collider other ) {
-        isInside = false;
-        message = false;
-        for (int i = 0; i < door.Length; i++) {
-            door[i].Interact(this);
-        }
-    }
+
 }

@@ -17,7 +17,9 @@ public class PlayerInteractor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+#if UNITY_ANDROID
         input.Reset();
+#endif
         cameraOrigin = GameManager.instance.mainCameraRig.rightEyeCamera;
         layerMask = LayerMask.GetMask( "Item", "Interactive" );
         StartCoroutine( input.CheckDoubleClick() );
@@ -38,7 +40,9 @@ public class PlayerInteractor : MonoBehaviour {
             TryInteract();
             input.grabInteraction = false;
         }
+#if UNITY_ANDROID
         input.click = Input.GetMouseButtonDown( 0 );
+#endif
 	}
 
     void TryInteract() {

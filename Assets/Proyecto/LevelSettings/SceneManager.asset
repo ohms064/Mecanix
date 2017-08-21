@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab675b66e4ce2454ca872f93336dc75b, type: 3}
   m_Name: SceneManager
   m_EditorClassIdentifier: 
-  sceneId: 4
-  sceneLoader: 2
-  sceneSelector: 3
+  sceneId: 1
+  sceneLoader: 3
+  sceneSelector: 2
   sceneMenu: 0
   loadingMode: 0
   OnDemoVideo: 0

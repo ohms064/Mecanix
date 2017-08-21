@@ -2611,7 +2611,6 @@ GameObject:
   - component: {fileID: 624365025}
   - component: {fileID: 624365024}
   - component: {fileID: 624365023}
-  - component: {fileID: 624365022}
   - component: {fileID: 624365021}
   - component: {fileID: 624365020}
   - component: {fileID: 624365026}
@@ -2675,28 +2674,6 @@ MonoBehaviour:
   button: 1
   events: []
   input: {fileID: 11400000, guid: e83f16717eceb6a48885a3c60d3a7cf9, type: 2}
---- !u!114 &624365022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114146830279079818, guid: bbd8c916d35b6bf48a9764e31bd122f3,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 624365018}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 013bcbd0cf156d44e956c0d6a62a726a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Acceleration: 0.3
-  Damping: 0.3
-  BackAndSideDampen: 0.5
-  JumpForce: 0.3
-  RotationAmount: 1.5
-  RotationRatchet: 45
-  HmdResetsY: 1
-  HmdRotatesY: 1
-  GravityModifier: 0
-  useProfileData: 1
 --- !u!114 &624365023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4646,7 +4623,7 @@ GameObject:
   - component: {fileID: 926690513}
   - component: {fileID: 926690512}
   m_Layer: 11
-  m_Name: GameObject
+  m_Name: ventana_rota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4688,7 +4665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3423908a4c21374eb51106dad46329f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 0
+  message: 1
   events:
   - {fileID: 777932275}
   - {fileID: 10001197}
@@ -6977,6 +6954,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5bbb855b27a270d44818ffa9991004dc, type: 2}
   - {fileID: 11400000, guid: 2d9bc957815802e47965323d0b649325, type: 2}
   - {fileID: 11400000, guid: 0c3404f24965b454c81f5ba150524f6e, type: 2}
+  - {fileID: 11400000, guid: ccd9a447f8d7452438af3b4ee3cf2bd8, type: 2}
 --- !u!4 &1370445419
 Transform:
   m_ObjectHideFlags: 0
@@ -7150,6 +7128,7 @@ GameObject:
   - component: {fileID: 1414433013}
   - component: {fileID: 1414433015}
   - component: {fileID: 1414433014}
+  - component: {fileID: 1414433016}
   m_Layer: 0
   m_Name: Meteoritos
   m_TagString: Untagged
@@ -7211,6 +7190,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1414433012}
+  m_Mesh: {fileID: 4300010, guid: cd914866220da91478b8ac9178d9a47b, type: 3}
+--- !u!64 &1414433016
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414433012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300010, guid: cd914866220da91478b8ac9178d9a47b, type: 3}
 --- !u!1 &1429844092
 GameObject:
@@ -9054,7 +9047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783000509}
   - component: {fileID: 1783000508}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: InnerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

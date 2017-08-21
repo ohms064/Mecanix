@@ -15,17 +15,21 @@ public class LoadSceneAsyncScriptableEditor : SceneEditor {
         script.sceneMenu = EditorGUILayout.Popup( "Main Menu", script.sceneMenu, scenes );
 
         GUILayout.Space( 5 );
+        try {
 
-        if ( GUILayout.Button( "Reload Scenes" ) ) {
-            string sceneId = scenes[script.sceneId];
-            string sceneLoader = scenes[script.sceneLoader];
-            string sceneSelector = scenes[script.sceneSelector];
-            string sceneMenu = scenes[script.sceneMenu];
+            if ( GUILayout.Button( "Reload Scenes" ) ) {
+                string sceneId = scenes[script.sceneId];
+                string sceneLoader = scenes[script.sceneLoader];
+                string sceneSelector = scenes[script.sceneSelector];
+                string sceneMenu = scenes[script.sceneMenu];
+                LoadScenes();
+                script.sceneId = Find( sceneId );
+                script.sceneLoader = Find( sceneLoader );
+                script.sceneSelector = Find( sceneSelector );
+                script.sceneMenu = Find( sceneMenu );
+            }
+        }catch(System.IndexOutOfRangeException e ) {
             LoadScenes();
-            script.sceneId = Find( sceneId );
-            script.sceneLoader = Find( sceneLoader );
-            script.sceneSelector = Find( sceneSelector );
-            script.sceneMenu = Find( sceneMenu );
         }
 
     }
