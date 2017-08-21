@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events: []
   label: Hoyo
-  _isActive: 0
+  _isActive: 1
   initialActive: 0
   description: "Se est\xE1 escapando el ox\xEDgeno."
   activeDescription: "Se repar\xF3 la ventana.\nNivel de ox\xEDgeno estable."

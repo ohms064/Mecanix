@@ -29,8 +29,10 @@ public class PlayerInteractor : MonoBehaviour {
 #if UNITY_ANDROID
             input.grabInteraction
 #endif
-#if !UNITY_EDITOR && !UNITY_STANDALONE
+#if !UNITY_EDITOR && UNITY_ANDROID
             || OVRInput.GetDown( button ) || Input.anyKeyDown
+#elif UNITY_EDITOR
+            Input.GetMouseButtonDown( 0 )
 #endif
             ) {
             TryInteract();
