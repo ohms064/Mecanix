@@ -677,6 +677,7 @@ MonoBehaviour:
   message: 0
   events: []
   data: {fileID: 11400000, guid: dd71b00b396804f4bb46827326484756, type: 2}
+  col: {fileID: 0}
 --- !u!135 &511938230
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -862,6 +863,7 @@ GameObject:
   - component: {fileID: 633231997}
   - component: {fileID: 633231996}
   - component: {fileID: 633231995}
+  - component: {fileID: 633232002}
   m_Layer: 0
   m_Name: EditorPlayer
   m_TagString: Untagged
@@ -884,6 +886,7 @@ MonoBehaviour:
   speedMovement: 0
   speedRotation: 100
   childCamera: {fileID: 209753730}
+  input: {fileID: 11400000, guid: e83f16717eceb6a48885a3c60d3a7cf9, type: 2}
 --- !u!114 &633231996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,6 +906,7 @@ MonoBehaviour:
   secondInteraction: 0
   button: -1
   events: []
+  input: {fileID: 11400000, guid: e83f16717eceb6a48885a3c60d3a7cf9, type: 2}
 --- !u!114 &633231997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,6 +991,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &633232002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 633231994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f2ac5ee8b920742915b691f0288458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &709679517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritePC: {fileID: 21300000, guid: 0c334d4e55abe8743be4474ca0672d84, type: 3}
   spriteVR: {fileID: 21300000, guid: 0226ff5f1d069d346bc0093f53559888, type: 3}
+  vrNoController: {fileID: 21300000, guid: a11413f6aacc7d84f881bfab77de9c46, type: 3}
 --- !u!1 &1268026311
 GameObject:
   m_ObjectHideFlags: 0

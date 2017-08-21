@@ -25,7 +25,11 @@ public class IdleReturn : MonoBehaviour {
 	}
 
     private void Update() {
-        if ( Input.GetKeyUp( KeyCode.R ) ) {
+        if ( Input.GetKeyUp( KeyCode.R )
+#if UNITY_ANDROID
+            || OVRInput.GetUp( OVRInput.RawButton.Back )
+#endif
+            ) {
             sceneManager.StartMainMenu();
         }
     }

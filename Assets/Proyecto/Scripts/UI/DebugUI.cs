@@ -12,7 +12,7 @@ public class DebugUI : MonoBehaviour {
     private bool waitingToHide = false;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         debug = GetComponent<Text>();
 	    instance = this;
 	}
@@ -37,12 +37,35 @@ public class DebugUI : MonoBehaviour {
         debug.text = string.Format("{0}\n", text);
         Debug.Log(text);
 
-        StartCoroutine( Hide() );
+        StartCoroutine( Hide(waitTime) );
     }
 
-    IEnumerator Hide() {
+    public void Log( string text, float t ) {
+        /*
+        debug.text += string.Format("{0}\n",text);
+        lines++;
+        if ( lines > maxLines ) {
+            string debugText = debug.text;
+            int find = debugText.IndexOf( "\n", 1, StringComparison.Ordinal );
+            debugText = debugText.Remove( 0, find);
+            debug.text = debugText;
+        }
+        Debug.Log( text );
+        */
+        if ( waitingToHide ) {
+            StopAllCoroutines();
+            waitingToHide = false;
+        }
+
+        debug.text = string.Format( "{0}\n", text );
+        Debug.Log( text );
+
+        StartCoroutine( Hide( t ) );
+    }
+
+    IEnumerator Hide(float t) {
         waitingToHide = true;
-        yield return new WaitForSeconds( waitTime );
+        yield return new WaitForSeconds( t );
         debug.text = "";
     }
 }

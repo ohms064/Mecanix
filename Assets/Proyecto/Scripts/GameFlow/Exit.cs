@@ -10,7 +10,11 @@ public class Exit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if ( Input.GetMouseButton( 1 ) ) {
+        if ( Input.GetMouseButton( 1 )
+#if UNITY_ANDROID
+            || Input.GetMouseButton(0)
+#endif
+            ) {
             time += Time.fixedDeltaTime;
             if ( time > pressedTime ) {
                 manager.SelectScene( sceneToLoad );

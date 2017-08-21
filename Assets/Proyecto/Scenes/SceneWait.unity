@@ -356,6 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritePC: {fileID: 21300000, guid: 0c334d4e55abe8743be4474ca0672d84, type: 3}
   spriteVR: {fileID: 21300000, guid: 0226ff5f1d069d346bc0093f53559888, type: 3}
+  vrNoController: {fileID: 21300000, guid: a11413f6aacc7d84f881bfab77de9c46, type: 3}
 --- !u!4 &528181418 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
