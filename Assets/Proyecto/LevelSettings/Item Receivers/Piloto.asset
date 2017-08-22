@@ -19,10 +19,10 @@ MonoBehaviour:
   activeDescription: "M\xE1scara de Ox\xEDgeno colocada."
   itemInteractions:
     item: {fileID: 11400000, guid: f683c091b7edfab4e97cd65aaf8a7c77, type: 2}
-    correctText: "Se puso la m\xE1scara al piloto"
+    correctText: "Se puso la m\xE1scara al piloto."
   failedInteraction: No parece servir de nada.
   requiredObjects:
   - {fileID: 11400000, guid: ccd9a447f8d7452438af3b4ee3cf2bd8, type: 2}
   - {fileID: 11400000}
   successText: "\xA1Has salvado al piloto!"
-  failedText: "Necesitas salvar al piloto de la nave!\xA1"
+  failedText: "\xA1Necesitas salvar al piloto de la nave!"

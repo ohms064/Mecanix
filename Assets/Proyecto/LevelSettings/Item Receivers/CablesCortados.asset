@@ -16,7 +16,7 @@ MonoBehaviour:
   label: Cables
   _isActive: 0
   initialActive: 0
-  description: "Los cables est\xE1n cortados"
+  description: Se requieren pegar los cables.
   activeDescription: "Los cables ya est\xE1n conectados."
   itemInteractions:
     item: {fileID: 11400000, guid: cff403f8b1c98164d9acc9d526dafc55, type: 2}
