@@ -16,7 +16,7 @@ MonoBehaviour:
   _isActive: 0
   initialActive: 0
   description: Parece requerir algo pesado para activarse.
-  activeDescription: 
+  activeDescription: "El bot\xF3n se ha presionado."
   requiredObjects: []
   successText: "\xA1Se abri\xF3 la compuerta al exterior!"
   failedText: 
